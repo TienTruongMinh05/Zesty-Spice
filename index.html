@@ -38,11 +38,6 @@
               sand: '#EFE7DA',
               charcoal: '#22252A',
             }
-          },
-          boxShadow: {
-            'soft': '0 10px 30px -5px rgba(0, 0, 0, 0.06)',
-            'glow-green': '0 0 25px rgba(46, 125, 50, 0.25)',
-            'glow-orange': '0 0 25px rgba(217, 119, 6, 0.25)',
           }
         }
       }
@@ -50,23 +45,44 @@
   </script>
 
   <style>
-    .badge-blur {
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+    /* Ribbon styling for Coming Soon */
+    .ribbon-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 130px;
+      height: 130px;
+      overflow: hidden;
+      z-index: 20;
     }
-    .nutrition-row:nth-child(odd) { background-color: rgba(0,0,0,0.025); }
+    .ribbon-tag {
+      position: absolute;
+      top: 26px;
+      right: -32px;
+      transform: rotate(45deg);
+      width: 140px;
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      color: white;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      padding: 5px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      text-transform: uppercase;
+    }
   </style>
 </head>
 <body class="bg-zesty-cream text-zesty-charcoal font-sans antialiased selection:bg-zesty-green selection:text-white">
 
   <!-- ═══════════════════════════════════════════════════════════
-       MAIN NAVIGATION HEADER
+       HEADER
   ═══════════════════════════════════════════════════════════ -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-zesty-sand/80 shadow-sm transition-all duration-300">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-zesty-sand shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
+      <a href="index.html" class="flex items-center gap-3 group">
         <div class="relative w-12 h-12 rounded-xl overflow-hidden shadow-sm border border-emerald-100 flex items-center justify-center bg-white">
           <img src="logo.jpg" alt="ZESTY Logo" class="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform">
         </div>
@@ -78,11 +94,10 @@
 
       <!-- Desktop Nav -->
       <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-gray-700">
+        <a href="#hero" class="hover:text-zesty-green transition-colors">Trang Chủ</a>
         <a href="#story" class="hover:text-zesty-green transition-colors">Sứ Mệnh</a>
         <a href="#products" class="hover:text-zesty-green transition-colors">Sản Phẩm</a>
-        <a href="#ingredients" class="hover:text-zesty-green transition-colors">Thành Phần</a>
-        <a href="#usage" class="hover:text-zesty-green transition-colors">Cách Dùng</a>
-        <a href="#usp" class="hover:text-zesty-green transition-colors">Cam Kết</a>
+        <a href="#order" class="hover:text-zesty-green transition-colors">Đặt Hàng</a>
         <a href="#b2b" class="text-zesty-orangeDark hover:text-zesty-orange transition-colors flex items-center gap-1">
           <i data-lucide="handshake" class="w-4 h-4"></i> Đối Tác
         </a>
@@ -90,9 +105,9 @@
 
       <!-- Action Button -->
       <div class="flex items-center space-x-3">
-        <a href="#order" class="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-zesty-green text-white font-bold text-sm shadow-md shadow-emerald-700/20 hover:bg-zesty-greenDark transition-all hover:shadow-lg active:scale-95">
+        <a href="#order" class="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-zesty-green text-white font-bold text-sm shadow-md shadow-emerald-700/20 hover:bg-zesty-greenDark transition-all active:scale-95">
           <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-          <span>Đặt Hàng</span>
+          <span>Đặt Mua Ngay</span>
         </a>
         <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-600 hover:text-zesty-green focus:outline-none" aria-label="Menu">
           <i data-lucide="menu" class="w-6 h-6"></i>
@@ -100,14 +115,13 @@
       </div>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
+    <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-6 space-y-3 shadow-lg">
+      <a href="#hero" class="block py-2 text-base font-medium text-gray-700 hover:text-zesty-green">Trang Chủ</a>
       <a href="#story" class="block py-2 text-base font-medium text-gray-700 hover:text-zesty-green">Sứ Mệnh</a>
       <a href="#products" class="block py-2 text-base font-medium text-gray-700 hover:text-zesty-green">Sản Phẩm</a>
-      <a href="#ingredients" class="block py-2 text-base font-medium text-gray-700 hover:text-zesty-green">Thành Phần & Dinh Dưỡng</a>
-      <a href="#usage" class="block py-2 text-base font-medium text-gray-700 hover:text-zesty-green">Cách Dùng & Bảo Quản</a>
-      <a href="#usp" class="block py-2 text-base font-medium text-gray-700 hover:text-zesty-green">Cam Kết Chất Lượng</a>
-      <a href="#b2b" class="block py-2 text-base font-semibold text-zesty-orangeDark">Đối Tác & Đại Lý</a>
+      <a href="#order" class="block py-2 text-base font-medium text-gray-700 hover:text-zesty-green">Đặt Hàng</a>
+      <a href="#b2b" class="block py-2 text-base font-semibold text-zesty-orangeDark">Dành Cho Đối Tác</a>
       <a href="#order" class="w-full text-center mt-2 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-zesty-green text-white font-bold">
         <i data-lucide="shopping-bag" class="w-4 h-4"></i> Đặt Hàng Ngay
       </a>
@@ -116,9 +130,9 @@
 
 
   <!-- ═══════════════════════════════════════════════════════════
-       HERO SECTION
+       HERO SECTION (Featuring both product images)
   ═══════════════════════════════════════════════════════════ -->
-  <section class="relative overflow-hidden pt-10 pb-16 lg:py-20 bg-gradient-to-b from-zesty-beige/70 via-zesty-cream to-white">
+  <section id="hero" class="relative overflow-hidden pt-10 pb-16 lg:py-20 bg-gradient-to-b from-zesty-beige/70 via-zesty-cream to-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
@@ -140,14 +154,14 @@
             "Nêm chút tinh hoa, thổi hồn món Việt"
           </p>
           <p class="text-sm sm:text-base text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-            Được chiết xuất từ vỏ quả tự nhiên kết hợp tôm khô, nấm đông cô và thảo mộc thuần Việt, ZESTY SPICE là giải pháp nêm nếm lành mạnh cho mọi bữa ăn gia đình — không chất bảo quản, không phẩm màu.
+            Chắt lọc tinh túy từ vỏ quả tự nhiên, thảo mộc truyền thống và nguồn đạm sạch — mang đến giải pháp nêm nếm tiện lợi, bảo vệ sức khỏe và nâng tầm bữa cơm gia đình.
           </p>
 
-          <!-- Key Badges Grid -->
+          <!-- Badges -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
             <div class="bg-white p-3 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
               <span class="text-emerald-600 bg-emerald-50 p-2 rounded-xl mb-1.5"><i data-lucide="leaf" class="w-5 h-5"></i></span>
-              <span class="text-xs font-bold text-gray-800">Tự Nhiên</span>
+              <span class="text-xs font-bold text-gray-800">100% Tự Nhiên</span>
               <span class="text-[10px] text-gray-500">Vỏ quả & thảo mộc</span>
             </div>
             <div class="bg-white p-3 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
@@ -158,7 +172,7 @@
             <div class="bg-white p-3 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
               <span class="text-emerald-600 bg-emerald-50 p-2 rounded-xl mb-1.5"><i data-lucide="ban" class="w-5 h-5"></i></span>
               <span class="text-xs font-bold text-gray-800">Không Phẩm Màu</span>
-              <span class="text-[10px] text-gray-500">Màu sắc tự nhiên</span>
+              <span class="text-[10px] text-gray-500">Màu sắc nguyên bản</span>
             </div>
             <div class="bg-white p-3 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
               <span class="text-amber-600 bg-amber-50 p-2 rounded-xl mb-1.5"><i data-lucide="sparkle" class="w-5 h-5"></i></span>
@@ -169,54 +183,49 @@
 
           <!-- CTA Buttons -->
           <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <a href="#order" class="w-full sm:w-auto px-8 py-4 rounded-full bg-zesty-green hover:bg-zesty-greenDark text-white font-bold text-base shadow-lg shadow-emerald-700/25 transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5">
-              <i data-lucide="shopping-cart" class="w-5 h-5"></i>
-              <span>Đặt Hàng Ngay</span>
+            <a href="#products" class="w-full sm:w-auto px-8 py-4 rounded-full bg-zesty-green hover:bg-zesty-greenDark text-white font-bold text-base shadow-lg shadow-emerald-700/25 transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5">
+              <i data-lucide="eye" class="w-5 h-5"></i>
+              <span>Khám Phá Sản Phẩm</span>
             </a>
-            <a href="#products" class="w-full sm:w-auto px-7 py-4 rounded-full bg-white hover:bg-gray-50 text-gray-800 font-bold text-base border border-gray-200 shadow-sm transition-all flex items-center justify-center gap-2">
-              <i data-lucide="eye" class="w-5 h-5 text-gray-500"></i>
-              <span>Xem Sản Phẩm</span>
+            <a href="#order" class="w-full sm:w-auto px-7 py-4 rounded-full bg-white hover:bg-gray-50 text-gray-800 font-bold text-base border border-gray-200 shadow-sm transition-all flex items-center justify-center gap-2">
+              <i data-lucide="shopping-cart" class="w-5 h-5 text-emerald-700"></i>
+              <span>Đặt Mua Ngay</span>
             </a>
           </div>
-
 
         </div>
 
-        <!-- Right: Product Visual -->
+        <!-- Right: 2 Product Images Preview in Hero -->
         <div class="lg:col-span-6">
-          <div class="relative mx-auto max-w-lg lg:max-w-none">
-            <div class="absolute -top-10 -left-10 w-72 h-72 bg-emerald-200/40 rounded-full blur-3xl -z-10"></div>
-            <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-amber-200/40 rounded-full blur-3xl -z-10"></div>
-            <div class="relative bg-white p-3 sm:p-4 rounded-3xl shadow-2xl border border-zesty-sand/80 group">
-              <img src="san-pham.png" alt="Bộ sản phẩm ZESTY SPICE – Bột gia vị sinh thái từ vỏ quả" class="rounded-2xl w-full object-cover shadow-inner group-hover:scale-[1.01] transition-transform duration-500">
-
-              <!-- Floating Badge: Main Key Info from label -->
-              <div class="absolute top-6 left-6 badge-blur bg-white/90 border border-emerald-200 rounded-2xl p-2.5 shadow-lg flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-zesty-green flex items-center justify-center">
-                  <i data-lucide="sprout" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <div class="text-[11px] uppercase tracking-wider text-emerald-800 font-extrabold">Không Chất Bảo Quản</div>
-                  <div class="text-[10px] text-gray-600 leading-tight">HSD 3–4 tháng kể từ SX</div>
-                </div>
+          <div class="grid grid-cols-2 gap-4">
+            
+            <!-- Hero Product Card 1 -->
+            <a href="zesty-spice.html" class="group bg-white p-3 rounded-3xl border border-zesty-sand shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 block">
+              <div class="overflow-hidden rounded-2xl bg-stone-50 aspect-square">
+                <img src="zesty%20spice%20anhsale.png" alt="ZESTY SPICE" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               </div>
-
-              <!-- Floating Badge: Origin -->
-              <div class="absolute bottom-6 right-6 badge-blur bg-white/90 border border-amber-200 rounded-2xl p-2.5 shadow-lg flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-amber-100 text-zesty-orangeDark flex items-center justify-center">
-                  <i data-lucide="map-pin" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <div class="text-[11px] uppercase tracking-wider text-zesty-orangeDark font-extrabold">Xuất xứ Việt Nam</div>
-                  <div class="text-[10px] text-gray-600 leading-tight">Khối lượng tịnh: 100g</div>
-                </div>
+              <div class="pt-3 text-center">
+                <span class="text-xs font-bold text-gray-900 group-hover:text-zesty-green transition-colors block">ZESTY SPICE</span>
+                <span class="text-[10px] text-emerald-700 font-semibold">Tôm khô & Nấm đông cô</span>
               </div>
-            </div>
+            </a>
 
-            <div class="mt-4 text-center">
-              <p class="text-xs text-gray-500 italic">ZESTY SPICE – Hũ gia vị đa năng 100g, sẵn sàng cho mọi công thức bếp nhà</p>
-            </div>
+            <!-- Hero Product Card 2 -->
+            <a href="zesty-spice-thuan-chay.html" class="group bg-white p-3 rounded-3xl border border-zesty-sand shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 block relative">
+              <div class="ribbon-wrapper">
+                <div class="ribbon-tag">COMING SOON</div>
+              </div>
+              <div class="overflow-hidden rounded-2xl bg-amber-50/40 aspect-square">
+                <img src="zesty%20spice%20thuan%20chay%20anhsale.png" alt="ZESTY SPICE THUẦN CHAY" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="pt-3 text-center">
+                <span class="text-xs font-bold text-gray-900 group-hover:text-zesty-orangeDark transition-colors block">ZESTY SPICE THUẦN CHAY</span>
+                <span class="text-[10px] text-amber-700 font-semibold">100% Thực vật & La hán quả</span>
+              </div>
+            </a>
+
           </div>
+          <p class="text-center text-xs text-gray-500 mt-4 italic">Nhấp vào từng sản phẩm để xem thành phần, dinh dưỡng & đặt mua chi tiết</p>
         </div>
 
       </div>
@@ -225,7 +234,7 @@
 
 
   <!-- ═══════════════════════════════════════════════════════════
-       SỨ MỆNH
+       SỨ MỆNH (MISSION)
   ═══════════════════════════════════════════════════════════ -->
   <section id="story" class="py-20 bg-white border-y border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -261,424 +270,117 @@
 
 
   <!-- ═══════════════════════════════════════════════════════════
-       PRODUCT SHOWCASE
+       DANH MỤC SẢN PHẨM (2 COMPACT CARDS)
   ═══════════════════════════════════════════════════════════ -->
   <section id="products" class="py-20 bg-zesty-beige/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-zesty-green">Sản phẩm</span>
+        <span class="text-xs uppercase font-extrabold tracking-widest text-zesty-green">Bộ sưu tập sản phẩm</span>
         <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900">
-          ZESTY SPICE – Bột Gia Vị Sinh Thái Từ Vỏ Quả
+          Hai Dòng Hương Vị Tinh Tế
         </h2>
-        <p class="text-gray-600 text-sm sm:text-base">Một công thức gia vị đa năng: vừa là muối chấm, vừa tẩm ướp, vừa nêm nếm — chỉ cần mở nắp là xong.</p>
+        <p class="text-gray-600 text-sm sm:text-base">Nhấp vào thẻ sản phẩm để xem đầy đủ bảng thành phần, giá trị dinh dưỡng, hướng dẫn chế biến và đặt hàng trực tiếp.</p>
       </div>
 
-      <!-- Main product card (single product visible so far) -->
-      <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-zesty-sand shadow-2xl overflow-hidden">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+      <!-- 2 Compact Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
 
-          <!-- Left: Image -->
-          <div class="relative bg-gradient-to-br from-emerald-50 to-amber-50 p-8 flex items-center justify-center">
-            <img src="san-pham.png" alt="ZESTY SPICE hũ 100g" class="h-80 object-contain rounded-2xl drop-shadow-xl hover:scale-105 transition-transform duration-300">
-            <span class="absolute top-4 left-4 bg-white text-[11px] font-black text-emerald-800 px-3 py-1.5 rounded-full shadow-md border border-emerald-100">
-              Khối lượng tịnh: 100g
-            </span>
-            <span class="absolute bottom-4 right-4 bg-zesty-green text-[11px] font-black text-white px-3 py-1.5 rounded-full shadow-md">
-              Xuất xứ: Việt Nam
-            </span>
+        <!-- Card 1: ZESTY SPICE (Original) -->
+        <div class="bg-white rounded-3xl border-2 border-emerald-500/20 shadow-xl overflow-hidden flex flex-col justify-between hover:border-emerald-500/60 hover:shadow-2xl transition-all duration-300 group">
+          
+          <div class="p-6 sm:p-8 space-y-5">
+            <!-- Badge -->
+            <div class="flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-xs uppercase tracking-wider">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Bản Gốc Đậm Đà
+              </span>
+              <span class="text-xs font-bold text-gray-500 bg-gray-100 px-2.5 py-1 rounded-lg">Hũ 100g</span>
+            </div>
+
+            <!-- Image -->
+            <a href="zesty-spice.html" class="block overflow-hidden rounded-2xl bg-stone-50 border border-emerald-50">
+              <img src="zesty%20spice%20anhsale.png" alt="ZESTY SPICE" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+            </a>
+
+            <!-- Content -->
+            <div>
+              <h3 class="text-2xl font-serif font-bold text-gray-900 group-hover:text-zesty-green transition-colors">
+                <a href="zesty-spice.html">ZESTY SPICE</a>
+              </h3>
+              <p class="text-zesty-green font-semibold text-sm">Bột Gia Vị Sinh Thái Từ Vỏ Quả</p>
+              <p class="text-gray-500 text-xs mt-2 line-clamp-2">
+                Kết hợp trần bì vỏ quả, tôm khô biển và nấm đông cô. Đậm đà, ngọt hậu tự nhiên cho các món ướp thịt, xào và nấu canh.
+              </p>
+            </div>
+
+            <!-- Highlights -->
+            <div class="grid grid-cols-3 gap-2 text-center text-[11px] pt-1">
+              <div class="bg-emerald-50/70 p-2 rounded-xl text-emerald-900 font-medium">Tôm khô biển</div>
+              <div class="bg-emerald-50/70 p-2 rounded-xl text-emerald-900 font-medium">Nấm đông cô</div>
+              <div class="bg-emerald-50/70 p-2 rounded-xl text-emerald-900 font-medium">Trần bì ủ thơm</div>
+            </div>
           </div>
 
-          <!-- Right: Product Details from label.png -->
-          <div class="p-8 space-y-5">
-            <div>
-              <h3 class="text-2xl font-serif font-bold text-gray-900">ZESTY SPICE</h3>
-              <p class="text-zesty-green font-bold text-base">Bột Gia Vị Sinh Thái Từ Vỏ Quả</p>
-              <p class="text-sm text-gray-500 italic mt-1">"Nêm chút tinh hoa, thổi hồn món Việt"</p>
-            </div>
-
-            <!-- 3 key icons from label -->
-            <div class="flex items-center gap-4 py-2">
-              <div class="flex flex-col items-center text-center text-xs text-gray-600">
-                <div class="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-1 text-lg">🦐</div>
-                <span class="font-semibold">Tôm khô</span>
-              </div>
-              <div class="flex flex-col items-center text-center text-xs text-gray-600">
-                <div class="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-1 text-lg">🍄</div>
-                <span class="font-semibold">Nấm đông cô</span>
-              </div>
-              <div class="flex flex-col items-center text-center text-xs text-gray-600">
-                <div class="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-1 text-lg">🟡</div>
-                <span class="font-semibold">Vỏ quả</span>
-              </div>
-            </div>
-
-            <!-- Key features -->
-            <ul class="space-y-2 text-sm text-gray-700">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i> Không chất bảo quản</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i> Đa năng: ướp, xào, nêm, chấm, rắc</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i> HSD: 3–4 tháng ở nhiệt độ phòng</li>
-              <li class="flex items-center gap-2"><i data-lucide="alert-triangle" class="w-4 h-4 text-amber-500 shrink-0"></i> Dị ứng: có nấm đông cô & tôm khô</li>
-            </ul>
-
-            <!-- Price placeholder -->
-            <div class="pt-3 border-t border-gray-100">
-              <p class="text-xs text-gray-500 mb-1">Giá bán lẻ</p>
-              <p class="text-xl font-black text-gray-400 italic">Cập nhật sau</p>
-            </div>
-
-            <a href="#order" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-zesty-green hover:bg-zesty-greenDark text-white font-bold text-sm shadow-md transition-all">
-              <i data-lucide="shopping-cart" class="w-4 h-4"></i> Liên Hệ Đặt Hàng
+          <!-- Action button -->
+          <div class="p-6 sm:p-8 pt-0">
+            <a href="zesty-spice.html" class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-zesty-green hover:bg-zesty-greenDark text-white font-bold text-sm shadow-md transition-all">
+              <span>Xem Chi Tiết & Đặt Mua</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
           </div>
+
         </div>
-      </div>
 
-      <!-- More products placeholder -->
-      <div class="mt-10 bg-white/70 border border-dashed border-gray-300 rounded-2xl p-8 text-center text-gray-400">
-        <i data-lucide="package-plus" class="w-10 h-10 mx-auto mb-3 text-gray-300"></i>
-        <p class="font-semibold text-base text-gray-500">Các biến thể sản phẩm khác</p>
-        <p class="text-sm mt-1">Cập nhật sau</p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════════════════════
-       INGREDIENTS & NUTRITION (from label.png)
-  ═══════════════════════════════════════════════════════════ -->
-  <section id="ingredients" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-zesty-green">Minh bạch nguyên liệu</span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900">Thành Phần & Thông Tin Dinh Dưỡng</h2>
-        <p class="text-gray-500 text-sm">Mỗi thìa ZESTY SPICE đều có thể truy xuất nguồn gốc rõ ràng</p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
-
-        <!-- Ingredients Box -->
-        <div class="bg-zesty-cream rounded-3xl p-8 border border-zesty-sand space-y-6">
-          <h3 class="font-bold text-gray-900 text-lg flex items-center gap-2">
-            <i data-lucide="list-checks" class="w-5 h-5 text-zesty-green"></i>
-            Thành Phần
-          </h3>
-          <div class="space-y-3">
-            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-100">
-              <span class="text-xl">🧂</span>
-              <div>
-                <p class="font-semibold text-sm text-gray-800">Muối thường</p>
-                <p class="text-xs text-gray-500">Tạo vị mặn nền</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-100">
-              <span class="text-xl">🦐</span>
-              <div>
-                <p class="font-semibold text-sm text-gray-800">Tôm khô</p>
-                <p class="text-xs text-gray-500">Vị ngọt đậm tự nhiên từ biển</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-100">
-              <span class="text-xl">🍄</span>
-              <div>
-                <p class="font-semibold text-sm text-gray-800">Nấm đông cô</p>
-                <p class="text-xs text-gray-500">Umami thiên nhiên, hỗ trợ miễn dịch</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-100">
-              <span class="text-xl">🍬</span>
-              <div>
-                <p class="font-semibold text-sm text-gray-800">Đường cát</p>
-                <p class="text-xs text-gray-500">Cân bằng vị, tạo vị ngọt hậu nhẹ</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-100">
-              <span class="text-xl">🧄</span>
-              <div>
-                <p class="font-semibold text-sm text-gray-800">Bột tỏi</p>
-                <p class="text-xs text-gray-500">Kháng khuẩn, dậy mùi hương ấm</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-100">
-              <span class="text-xl">🟡</span>
-              <div>
-                <p class="font-semibold text-sm text-gray-800">Trần bì (vỏ quả)</p>
-                <p class="text-xs text-gray-500">Tinh dầu thơm tự nhiên, kiện tỳ vị</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-100">
-              <span class="text-xl">🫚</span>
-              <div>
-                <p class="font-semibold text-sm text-gray-800">Bột gừng</p>
-                <p class="text-xs text-gray-500">Ấm bụng, khử tanh, kháng viêm nhẹ</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-100">
-              <span class="text-xl">🌶️</span>
-              <div>
-                <p class="font-semibold text-sm text-gray-800">Tiêu xay</p>
-                <p class="text-xs text-gray-500">Cay ấm, dậy mùi, kích thích tiêu hóa</p>
-              </div>
-            </div>
+        <!-- Card 2: ZESTY SPICE THUẦN CHAY (Coming Soon) -->
+        <div class="bg-white rounded-3xl border-2 border-amber-500/20 shadow-xl overflow-hidden flex flex-col justify-between hover:border-amber-500/60 hover:shadow-2xl transition-all duration-300 group relative">
+          
+          <!-- Coming soon Ribbon -->
+          <div class="ribbon-wrapper">
+            <div class="ribbon-tag">COMING SOON</div>
           </div>
 
-          <!-- Allergy warning -->
-          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-start gap-3">
-            <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+          <div class="p-6 sm:p-8 space-y-5">
+            <!-- Badge -->
+            <div class="flex items-center justify-between pr-16">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-zesty-orangeDark font-extrabold text-xs uppercase tracking-wider">
+                <i data-lucide="leaf" class="w-3.5 h-3.5"></i> Thuần Chay 100%
+              </span>
+              <span class="text-xs font-bold text-gray-500 bg-gray-100 px-2.5 py-1 rounded-lg">Hũ 100g</span>
+            </div>
+
+            <!-- Image -->
+            <a href="zesty-spice-thuan-chay.html" class="block overflow-hidden rounded-2xl bg-amber-50/40 border border-amber-50">
+              <img src="zesty%20spice%20thuan%20chay%20anhsale.png" alt="ZESTY SPICE THUẦN CHAY" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+            </a>
+
+            <!-- Content -->
             <div>
-              <p class="font-bold text-sm text-amber-900">Cảnh Báo Dị Ứng</p>
-              <p class="text-xs text-amber-800 mt-0.5">Thành phần có chứa <strong>nấm đông cô</strong> và <strong>tôm khô</strong>. Không sử dụng cho người dị ứng với các thành phần trên.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Nutrition Facts Box -->
-        <div class="space-y-6">
-          <div class="bg-zesty-cream rounded-3xl p-8 border border-zesty-sand">
-            <h3 class="font-bold text-gray-900 text-lg flex items-center gap-2 mb-6">
-              <i data-lucide="bar-chart-2" class="w-5 h-5 text-zesty-green"></i>
-              Thông Tin Dinh Dưỡng
-              <span class="text-xs font-normal text-gray-500">(Nutrition Facts)</span>
-            </h3>
-
-            <!-- Nutrition table -->
-            <div class="rounded-2xl overflow-hidden border border-gray-200">
-              <table class="w-full text-sm">
-                <thead>
-                  <tr class="bg-zesty-greenDark text-white">
-                    <th class="text-left px-4 py-2.5 font-bold text-xs">Chỉ tiêu</th>
-                    <th class="text-right px-4 py-2.5 font-bold text-xs">Giá trị</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-100">
-                  <tr class="nutrition-row">
-                    <td class="px-4 py-3 text-gray-700">Năng lượng (Energy)</td>
-                    <td class="px-4 py-3 text-right font-bold text-gray-900">230 kcal</td>
-                  </tr>
-                  <tr class="nutrition-row">
-                    <td class="px-4 py-3 text-gray-700">Chất đạm (Protein)</td>
-                    <td class="px-4 py-3 text-right font-bold text-gray-900">17g</td>
-                  </tr>
-                  <tr class="nutrition-row">
-                    <td class="px-4 py-3 text-gray-700">Tổng chất béo (Total Fat)</td>
-                    <td class="px-4 py-3 text-right font-bold text-gray-900">2g</td>
-                  </tr>
-                  <tr class="nutrition-row">
-                    <td class="px-4 py-3 text-gray-700">Tổng Carbohydrate</td>
-                    <td class="px-4 py-3 text-right font-bold text-gray-900">37g</td>
-                  </tr>
-                  <tr class="nutrition-row">
-                    <td class="px-4 py-3 text-gray-700">Natri (Sodium)</td>
-                    <td class="px-4 py-3 text-right font-bold text-gray-900">12g</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="text-[11px] text-gray-400 mt-3 text-center">*Tính trên 100g sản phẩm</p>
-          </div>
-
-          <!-- Product label image preview -->
-          <div class="bg-zesty-cream rounded-3xl p-6 border border-zesty-sand">
-            <h4 class="font-bold text-gray-900 text-sm mb-3 flex items-center gap-2">
-              <i data-lucide="tag" class="w-4 h-4 text-zesty-green"></i> Nhãn Sản Phẩm Thực Tế
-            </h4>
-            <img src="label.png" alt="Nhãn sản phẩm ZESTY SPICE" class="rounded-xl w-full object-contain border border-gray-100 shadow-sm">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════════════════════
-       HOW TO USE & STORAGE (from label.png)
-  ═══════════════════════════════════════════════════════════ -->
-  <section id="usage" class="py-20 bg-zesty-beige/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-zesty-green">Hướng dẫn</span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900">Cách Dùng & Bảo Quản</h2>
-        <p class="text-gray-500 text-sm">Đơn giản – Nhanh chóng – Đúng cách để giữ trọn hương vị</p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
-
-        <!-- HOW TO USE -->
-        <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-md space-y-6">
-          <h3 class="font-bold text-gray-900 text-lg flex items-center gap-2">
-            <i data-lucide="chef-hat" class="w-5 h-5 text-zesty-green"></i>
-            Hướng Dẫn Sử Dụng
-          </h3>
-
-          <div class="space-y-4">
-
-            <!-- Usage 1: Ướp -->
-            <div class="flex gap-4 p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100">
-              <div class="w-10 h-10 rounded-xl bg-zesty-green text-white flex items-center justify-center shrink-0 font-black text-sm">1</div>
-              <div>
-                <p class="font-bold text-sm text-gray-900 mb-1">Dùng để ướp thịt/cá</p>
-                <p class="text-xs text-gray-600 leading-relaxed">Sử dụng <strong>1–2 thìa cà phê</strong> bột gia vị cho <strong>500g nguyên liệu</strong> (thịt heo, gà, tôm, cá). Thoa đều và ướp khoảng <strong>15–30 phút</strong> trước khi áp chảo, nướng hoặc kho để đánh bay mùi tanh và dậy mùi thơm.</p>
-              </div>
+              <h3 class="text-2xl font-serif font-bold text-gray-900 group-hover:text-zesty-orangeDark transition-colors">
+                <a href="zesty-spice-thuan-chay.html">ZESTY SPICE THUẦN CHAY</a>
+              </h3>
+              <p class="text-zesty-orangeDark font-semibold text-sm">Bột Gia Vị Sinh Thái Từ Vỏ Quả</p>
+              <p class="text-gray-500 text-xs mt-2 line-clamp-2">
+                100% từ thực vật với nấm đông cô, la hán quả và trần bì. Vị ngọt thanh tịnh, lành mạnh cho các món chay, thực dưỡng và eat-clean.
+              </p>
             </div>
 
-            <!-- Usage 2: Xào -->
-            <div class="flex gap-4 p-4 rounded-2xl bg-amber-50/60 border border-amber-100">
-              <div class="w-10 h-10 rounded-xl bg-zesty-orange text-white flex items-center justify-center shrink-0 font-black text-sm">2</div>
-              <div>
-                <p class="font-bold text-sm text-gray-900 mb-1">Dùng để xào</p>
-                <p class="text-xs text-gray-600 leading-relaxed">Rắc <strong>1 thìa cà phê</strong> vào các món rau xào, cơm chiên hoặc mì xào ở phút cuối cùng trên chảo để dậy mùi thơm.</p>
-              </div>
-            </div>
-
-            <!-- Usage 3: Canh/Nước dùng -->
-            <div class="flex gap-4 p-4 rounded-2xl bg-blue-50/60 border border-blue-100">
-              <div class="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center shrink-0 font-black text-sm">3</div>
-              <div>
-                <p class="font-bold text-sm text-gray-900 mb-1">Dùng để nấu nước dùng/canh</p>
-                <p class="text-xs text-gray-600 leading-relaxed">Cho vào nước dùng để lấy hương thơm và vị ngọt hậu của nấm/tôm. Nên kết hợp thêm <strong>nước mắm hoặc muối tinh</strong> để món canh đạt đủ độ mặn mong muốn.</p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Warning note from label -->
-          <div class="bg-red-50 border border-red-100 rounded-2xl p-4 flex items-start gap-3">
-            <i data-lucide="info" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
-            <div>
-              <p class="font-bold text-xs text-red-800">Lưu ý quan trọng</p>
-              <p class="text-xs text-red-700 mt-0.5">Không rắc trực tiếp sản phẩm phía trên thức ăn đang sôi hoặc bốc hơi nhanh — hơi nước nhiều sẽ làm gia vị kết lại và gây ẩm mốc.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- STORAGE -->
-        <div class="space-y-6">
-          <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-md space-y-5">
-            <h3 class="font-bold text-gray-900 text-lg flex items-center gap-2">
-              <i data-lucide="thermometer" class="w-5 h-5 text-zesty-green"></i>
-              Hướng Dẫn Bảo Quản
-            </h3>
-
-            <div class="space-y-3">
-              <div class="flex items-start gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
-                <p class="text-sm text-gray-700">Sau khi sử dụng, cần đóng chặt cả <strong>hai nắp</strong> để ngăn không khí lọt vào.</p>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
-                <p class="text-sm text-gray-700">Luôn để gói hút ẩm thực phẩm bên trong hũ.</p>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
-                <p class="text-sm text-gray-700">Bảo quản nơi <strong>khô ráo, thoáng mát</strong>.</p>
-              </div>
-              <div class="flex items-start gap-3">
-                <i data-lucide="x-circle" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
-                <p class="text-sm text-gray-700">Tránh ánh nắng trực tiếp và hơi ẩm nhiều.</p>
-              </div>
-            </div>
-
-            <!-- Shelf life -->
-            <div class="mt-4 bg-zesty-cream rounded-2xl p-4 flex items-center gap-4">
-              <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-zesty-greenDark flex flex-col items-center justify-center shrink-0">
-                <span class="text-xl font-black leading-none">3–4</span>
-                <span class="text-[9px] font-bold uppercase">tháng</span>
-              </div>
-              <div>
-                <p class="font-bold text-sm text-gray-900">Hạn sử dụng</p>
-                <p class="text-xs text-gray-600 mt-0.5">3–4 tháng kể từ ngày sản xuất, khi bảo quản đúng cách ở nhiệt độ phòng.</p>
-              </div>
+            <!-- Highlights -->
+            <div class="grid grid-cols-3 gap-2 text-center text-[11px] pt-1">
+              <div class="bg-amber-50/70 p-2 rounded-xl text-amber-900 font-medium">100% Thực vật</div>
+              <div class="bg-amber-50/70 p-2 rounded-xl text-amber-900 font-medium">La hán quả</div>
+              <div class="bg-amber-50/70 p-2 rounded-xl text-amber-900 font-medium">Nấm đông cô</div>
             </div>
           </div>
 
-          <!-- Label image again for reference -->
-          <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-md">
-            <h4 class="font-bold text-gray-900 text-sm mb-4 flex items-center gap-2">
-              <i data-lucide="package" class="w-4 h-4 text-zesty-green"></i>
-              Thông Tin Đóng Gói
-            </h4>
-            <div class="space-y-2 text-sm text-gray-700">
-              <div class="flex justify-between py-2 border-b border-gray-100">
-                <span class="text-gray-500">Barcode</span>
-                <span class="font-mono font-bold">8 901444 037092</span>
-              </div>
-              <div class="flex justify-between py-2 border-b border-gray-100">
-                <span class="text-gray-500">Khối lượng tịnh</span>
-                <span class="font-bold">100g</span>
-              </div>
-              <div class="flex justify-between py-2 border-b border-gray-100">
-                <span class="text-gray-500">Xuất xứ</span>
-                <span class="font-bold">Việt Nam</span>
-              </div>
-              <div class="flex justify-between py-2">
-                <span class="text-gray-500">Quy cách gói nhỏ</span>
-                <span class="text-gray-400 italic text-xs">Cập nhật sau</span>
-              </div>
-            </div>
+          <!-- Action button -->
+          <div class="p-6 sm:p-8 pt-0">
+            <a href="zesty-spice-thuan-chay.html" class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-zesty-orange hover:bg-zesty-orangeDark text-white font-bold text-sm shadow-md transition-all">
+              <span>Xem Chi Tiết & Đặt Trước</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
           </div>
-        </div>
 
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════════════════════
-       4 COMMITMENTS (USP)
-  ═══════════════════════════════════════════════════════════ -->
-  <section id="usp" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-zesty-green">Cam kết chất lượng</span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900">Tại Sao Chọn ZESTY SPICE?</h2>
-        <p class="text-gray-500 text-sm">Sản phẩm được tạo ra bằng sự tỉ mỉ và trách nhiệm với sức khỏe cộng đồng</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <div class="text-center p-6 rounded-2xl bg-zesty-cream border border-zesty-sand/60 hover:-translate-y-1 transition-all">
-          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-emerald-100 text-zesty-green flex items-center justify-center">
-            <i data-lucide="leaf" class="w-8 h-8"></i>
-          </div>
-          <h4 class="text-lg font-bold text-gray-900 mb-2">Nguyên Liệu Tự Nhiên</h4>
-          <p class="text-xs text-gray-600 leading-relaxed">
-            7 thành phần rõ ràng, có thể truy xuất nguồn gốc: vỏ quả (trần bì), nấm đông cô, tôm khô, bột gừng, bột tỏi, tiêu xay và muối hầm.
-          </p>
-        </div>
-
-        <div class="text-center p-6 rounded-2xl bg-zesty-cream border border-zesty-sand/60 hover:-translate-y-1 transition-all">
-          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-amber-100 text-zesty-orangeDark flex items-center justify-center">
-            <i data-lucide="flask-conical-off" class="w-8 h-8"></i>
-          </div>
-          <h4 class="text-lg font-bold text-gray-900 mb-2">Không Chất Bảo Quản</h4>
-          <p class="text-xs text-gray-600 leading-relaxed">
-            Bảo quản tự nhiên thông qua kiểm soát độ ẩm — không thêm chất phụ gia hay hóa chất bảo quản nào.
-          </p>
-        </div>
-
-        <div class="text-center p-6 rounded-2xl bg-zesty-cream border border-zesty-sand/60 hover:-translate-y-1 transition-all">
-          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-emerald-100 text-zesty-green flex items-center justify-center">
-            <i data-lucide="zap" class="w-8 h-8"></i>
-          </div>
-          <h4 class="text-lg font-bold text-gray-900 mb-2">Đa Năng – Tiết Kiệm</h4>
-          <p class="text-xs text-gray-600 leading-relaxed">
-            Một hũ thay thế nhiều loại gia vị: dùng được cho ướp thịt, nấu canh, xào rau, làm muối chấm, hay rắc thẳng vào món.
-          </p>
-        </div>
-
-        <div class="text-center p-6 rounded-2xl bg-zesty-cream border border-zesty-sand/60 hover:-translate-y-1 transition-all">
-          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-amber-100 text-zesty-orangeDark flex items-center justify-center">
-            <i data-lucide="clock" class="w-8 h-8"></i>
-          </div>
-          <h4 class="text-lg font-bold text-gray-900 mb-2">Tiết Kiệm Thời Gian</h4>
-          <p class="text-xs text-gray-600 leading-relaxed">
-            Không cần sơ chế phức tạp — chỉ cần mở nắp là xong. Phù hợp với nhịp sống bận rộn hiện đại mà vẫn giữ bữa ăn lành mạnh.
-          </p>
         </div>
 
       </div>
@@ -688,229 +390,94 @@
 
 
   <!-- ═══════════════════════════════════════════════════════════
-       MARKET ANALYSIS (placeholder – from docx which had no data yet)
+       LIÊN HỆ ĐẶT HÀNG (GOOGLE FORM EMBED)
   ═══════════════════════════════════════════════════════════ -->
-  <section id="market" class="py-20 bg-zesty-beige/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-zesty-green">Phân tích thị trường</span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900">Thị Trường & Khách Hàng Mục Tiêu</h2>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-          <i data-lucide="target" class="w-8 h-8 text-zesty-green mx-auto mb-3"></i>
-          <h4 class="font-bold text-gray-900 mb-2">Khách Hàng Mục Tiêu</h4>
-          <p class="text-gray-400 text-sm italic">Cập nhật sau</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-          <i data-lucide="trending-up" class="w-8 h-8 text-zesty-green mx-auto mb-3"></i>
-          <h4 class="font-bold text-gray-900 mb-2">Quy Mô Thị Trường</h4>
-          <p class="text-gray-400 text-sm italic">Cập nhật sau</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-          <i data-lucide="crosshair" class="w-8 h-8 text-zesty-green mx-auto mb-3"></i>
-          <h4 class="font-bold text-gray-900 mb-2">Phân Tích Đối Thủ</h4>
-          <p class="text-gray-400 text-sm italic">Cập nhật sau</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════════════════════
-       BUSINESS MODEL / PRICING (placeholder)
-  ═══════════════════════════════════════════════════════════ -->
-  <section id="business" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-zesty-green">Kế hoạch kinh doanh</span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900">Mô Hình & Chiến Lược Kinh Doanh</h2>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-        <div class="bg-zesty-cream rounded-2xl p-6 border border-zesty-sand shadow-sm text-center">
-          <i data-lucide="dollar-sign" class="w-8 h-8 text-zesty-green mx-auto mb-3"></i>
-          <h4 class="font-bold text-gray-900 mb-2">Bảng Giá Bán</h4>
-          <p class="text-gray-400 text-sm italic">Cập nhật sau</p>
-        </div>
-        <div class="bg-zesty-cream rounded-2xl p-6 border border-zesty-sand shadow-sm text-center">
-          <i data-lucide="truck" class="w-8 h-8 text-zesty-green mx-auto mb-3"></i>
-          <h4 class="font-bold text-gray-900 mb-2">Kênh Phân Phối</h4>
-          <p class="text-gray-400 text-sm italic">Cập nhật sau</p>
-        </div>
-        <div class="bg-zesty-cream rounded-2xl p-6 border border-zesty-sand shadow-sm text-center">
-          <i data-lucide="megaphone" class="w-8 h-8 text-zesty-green mx-auto mb-3"></i>
-          <h4 class="font-bold text-gray-900 mb-2">Chiến Lược Marketing</h4>
-          <p class="text-gray-400 text-sm italic">Cập nhật sau</p>
-        </div>
-        <div class="bg-zesty-cream rounded-2xl p-6 border border-zesty-sand shadow-sm text-center">
-          <i data-lucide="line-chart" class="w-8 h-8 text-zesty-green mx-auto mb-3"></i>
-          <h4 class="font-bold text-gray-900 mb-2">Dự Báo Tài Chính</h4>
-          <p class="text-gray-400 text-sm italic">Cập nhật sau</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════════════════════
-       ORDER FORM
-  ═══════════════════════════════════════════════════════════ -->
-  <section id="order" class="py-20 bg-zesty-beige/40">
+  <section id="order" class="py-20 bg-white border-t border-gray-100">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="text-center space-y-3 mb-12">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-zesty-green">Liên hệ & Đặt hàng</span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900">Đặt Hàng Trải Nghiệm</h2>
-        <p class="text-gray-600 text-sm">Điền thông tin để nhóm liên hệ và tư vấn trực tiếp</p>
+      <div class="text-center space-y-3 mb-10">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-zesty-green">Đặt hàng trực tiếp</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900">
+          Liên Hệ & Đặt Hàng Trải Nghiệm
+        </h2>
+        <p class="text-gray-600 text-sm">Điền thông tin vào biểu mẫu bên dưới để nhận sản phẩm ZESTY SPICE sớm nhất!</p>
       </div>
 
-      <div class="bg-white p-6 sm:p-10 rounded-3xl border border-zesty-sand shadow-xl">
-        <form id="orderForm" onsubmit="handleOrderSubmit(event)" class="space-y-6">
-
-          <!-- Product selection placeholder (price TBD) -->
-          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-center gap-3">
-            <i data-lucide="info" class="w-5 h-5 text-amber-600 shrink-0"></i>
-            <p class="text-sm text-amber-800">Giá bán chính thức đang được cập nhật. Nhóm sẽ báo giá cụ thể khi liên hệ xác nhận đơn hàng.</p>
-          </div>
-
-          <!-- Product interest -->
-          <div class="space-y-2">
-            <label class="block text-sm font-bold text-gray-800">Sản phẩm quan tâm:</label>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <label class="relative flex items-center gap-3 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer hover:border-emerald-500 has-[:checked]:border-emerald-600 has-[:checked]:bg-emerald-50/50 transition-all">
-                <input type="radio" name="productChoice" value="ZESTY SPICE Hũ 100g" class="sr-only" checked>
-                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-zesty-green flex items-center justify-center shrink-0">
-                  <i data-lucide="package" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <span class="text-sm font-bold text-gray-900 block">Hũ 100g</span>
-                  <span class="text-xs text-gray-500">Bột gia vị sinh thái từ vỏ quả</span>
-                </div>
-              </label>
-              <label class="relative flex items-center gap-3 p-4 rounded-2xl border-2 border-gray-200 cursor-pointer hover:border-amber-500 has-[:checked]:border-amber-600 has-[:checked]:bg-amber-50/50 transition-all">
-                <input type="radio" name="productChoice" value="ZESTY SPICE Gói nhỏ" class="sr-only">
-                <div class="w-10 h-10 rounded-xl bg-amber-100 text-zesty-orangeDark flex items-center justify-center shrink-0">
-                  <i data-lucide="package-2" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <span class="text-sm font-bold text-gray-900 block">Gói nhỏ (dùng thử)</span>
-                  <span class="text-xs text-gray-500 italic">Cập nhật sau</span>
-                </div>
-              </label>
-            </div>
-          </div>
-
-          <!-- Customer info -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-bold text-gray-700 mb-1.5">Họ và tên *</label>
-              <input type="text" id="custName" required placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-zesty-green bg-white text-sm">
-            </div>
-            <div>
-              <label class="block text-xs font-bold text-gray-700 mb-1.5">Số điện thoại *</label>
-              <input type="tel" id="custPhone" required placeholder="09xxxxxxxx" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-zesty-green bg-white text-sm">
-            </div>
-            <div class="sm:col-span-2">
-              <label class="block text-xs font-bold text-gray-700 mb-1.5">Địa chỉ nhận hàng *</label>
-              <input type="text" id="custAddress" required placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-zesty-green bg-white text-sm">
-            </div>
-            <div class="sm:col-span-2">
-              <label class="block text-xs font-bold text-gray-700 mb-1.5">Ghi chú thêm</label>
-              <textarea id="custNote" rows="2" placeholder="Yêu cầu đặc biệt, thời gian giao hàng..." class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-zesty-green bg-white text-sm"></textarea>
-            </div>
-          </div>
-
-          <button type="submit" class="w-full py-4 rounded-2xl bg-zesty-green hover:bg-zesty-greenDark text-white font-extrabold text-base shadow-lg shadow-emerald-700/25 transition-all flex items-center justify-center gap-2">
-            <i data-lucide="send" class="w-5 h-5"></i>
-            <span>Gửi Yêu Cầu Đặt Hàng</span>
-          </button>
-
-          <p class="text-center text-[11px] text-gray-500 flex items-center justify-center gap-1">
-            <i data-lucide="lock" class="w-3.5 h-3.5"></i> Thông tin của bạn được bảo mật. Nhóm ZESTY sẽ liên hệ xác nhận trong 24h.
-          </p>
-
-        </form>
-
-        <!-- Success Message -->
-        <div id="orderSuccess" class="hidden text-center py-10 space-y-4">
-          <div class="w-16 h-16 bg-emerald-100 text-zesty-green rounded-full mx-auto flex items-center justify-center">
-            <i data-lucide="check-circle" class="w-10 h-10"></i>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900">Gửi Thành Công!</h3>
-          <p class="text-gray-600 text-sm max-w-md mx-auto" id="successDetails">
-            Cảm ơn bạn đã quan tâm đến ZESTY SPICE. Nhóm sẽ liên hệ lại trong thời gian sớm nhất!
-          </p>
-          <button onclick="resetOrderForm()" class="px-6 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold">
-            Gửi thêm yêu cầu khác
-          </button>
+      <div class="bg-zesty-cream p-4 sm:p-8 rounded-3xl border border-zesty-sand shadow-xl">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-inner">
+          <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSekX3g9NfUqxKpfp70flB49F20yHbxoy_L_nklwIfCZSHnMNg/viewform?embedded=true" 
+            width="100%" 
+            height="800" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0" 
+            class="w-full">
+            Đang tải biểu mẫu...
+          </iframe>
         </div>
 
+        <div class="text-center pt-4">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSekX3g9NfUqxKpfp70flB49F20yHbxoy_L_nklwIfCZSHnMNg/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs text-zesty-green hover:underline font-bold">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Mở biểu mẫu đặt hàng trong tab mới
+          </a>
+        </div>
       </div>
+
     </div>
   </section>
 
 
   <!-- ═══════════════════════════════════════════════════════════
-       B2B / PARTNERSHIP
+       ĐỐI TÁC & NHÀ PHÂN PHỐI (B2B GOOGLE FORM)
   ═══════════════════════════════════════════════════════════ -->
   <section id="b2b" class="py-20 bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 text-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-        <div class="lg:col-span-7 space-y-6">
+        <div class="lg:col-span-5 space-y-6">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
-            <i data-lucide="handshake" class="w-4 h-4"></i> Dành Cho Đối Tác & Nhà Phân Phối
+            <i data-lucide="handshake" class="w-4 h-4"></i> Hợp Tác Phân Phối
           </div>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold leading-tight">
-            Hợp Tác Cùng ZESTY SPICE
+            Đồng Hành Cùng ZESTY SPICE
           </h2>
-          <p class="text-gray-300 text-base leading-relaxed">
-            Bạn là chủ <strong>cửa hàng thực phẩm sạch, siêu thị mini, nhà hàng, quán ăn</strong> hoặc <strong>nhà phân phối</strong>? Hãy liên hệ để nhận hồ sơ đối tác, báo giá sỉ và chính sách hỗ trợ bán hàng từ ZESTY SPICE.
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+            Bạn là chủ <strong>chuỗi thực phẩm sạch, siêu thị mini, nhà hàng, quán ăn</strong> hoặc <strong>nhà phân phối nông sản</strong>? Hãy đăng ký thông tin hợp tác để nhận hồ sơ báo giá sỉ và các chính sách hỗ trợ bán hàng tốt nhất từ chúng tôi.
           </p>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="bg-white/10 p-4 rounded-2xl border border-white/10">
-              <h5 class="font-bold text-amber-300 mb-1 flex items-center gap-1.5 text-sm">
-                <i data-lucide="percent" class="w-4 h-4"></i> Chiết Khấu Đại Lý
-              </h5>
-              <p class="text-xs text-gray-300 italic">Cập nhật sau</p>
-            </div>
-            <div class="bg-white/10 p-4 rounded-2xl border border-white/10">
-              <h5 class="font-bold text-amber-300 mb-1 flex items-center gap-1.5 text-sm">
-                <i data-lucide="package-check" class="w-4 h-4"></i> Hỗ Trợ Mẫu Thử
-              </h5>
-              <p class="text-xs text-gray-300 italic">Cập nhật sau</p>
-            </div>
+          <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 space-y-2 text-xs text-gray-200">
+            <p class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Chính sách giá sỉ ưu đãi</p>
+            <p class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Hỗ trợ sample thử vị và tài liệu giới thiệu</p>
+            <p class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Đồng hành quảng bá thương hiệu</p>
           </div>
         </div>
 
-        <!-- B2B Contact Form -->
-        <div class="lg:col-span-5">
-          <div class="bg-white text-gray-900 p-8 rounded-3xl shadow-2xl">
-            <h3 class="text-xl font-bold mb-2">Đăng Ký Nhận Hồ Sơ Đối Tác</h3>
-            <p class="text-xs text-gray-500 mb-6">Nhóm sẽ phản hồi trong vòng 24h</p>
-            <form onsubmit="handleB2BSubmit(event)" class="space-y-4">
-              <div>
-                <label class="block text-xs font-bold text-gray-700 mb-1">Tên đơn vị / Cá nhân</label>
-                <input type="text" required placeholder="Tên cửa hàng / doanh nghiệp" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-sm focus:ring-2 focus:ring-zesty-green focus:outline-none">
-              </div>
-              <div>
-                <label class="block text-xs font-bold text-gray-700 mb-1">Số điện thoại / Zalo</label>
-                <input type="tel" required placeholder="09xxxxxxxx" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-sm focus:ring-2 focus:ring-zesty-green focus:outline-none">
-              </div>
-              <div>
-                <label class="block text-xs font-bold text-gray-700 mb-1">Khu vực phân phối</label>
-                <input type="text" placeholder="TP.HCM, Hà Nội, Cần Thơ..." class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-sm focus:ring-2 focus:ring-zesty-green focus:outline-none">
-              </div>
-              <button type="submit" class="w-full py-3.5 rounded-xl bg-zesty-orange hover:bg-zesty-orangeDark text-white font-bold text-sm shadow-md transition-all">
-                Gửi Yêu Cầu Hợp Tác
-              </button>
-            </form>
+        <!-- B2B Form Embed -->
+        <div class="lg:col-span-7">
+          <div class="bg-white rounded-3xl p-4 sm:p-6 shadow-2xl text-gray-900">
+            <div class="rounded-2xl overflow-hidden shadow-inner">
+              <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeMZQN609PwQVRw5j8f2ABdBkcptAeUboru-dF8CVwxfVBtgQ/viewform?embedded=true" 
+                width="100%" 
+                height="650" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0" 
+                class="w-full">
+                Đang tải biểu mẫu đối tác...
+              </iframe>
+            </div>
+            <div class="text-center pt-3">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMZQN609PwQVRw5j8f2ABdBkcptAeUboru-dF8CVwxfVBtgQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs text-zesty-orangeDark hover:underline font-bold">
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Mở biểu mẫu đối tác trong tab mới
+              </a>
+            </div>
           </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -938,74 +505,42 @@
           <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
             Gia vị sinh thái từ vỏ quả tự nhiên, mang đến giải pháp nêm nếm lành mạnh cho mọi bữa cơm gia đình Việt — không chất bảo quản, không phẩm màu.
           </p>
-          <div class="flex items-center space-x-3 pt-2 text-gray-500">
-            <a href="#" class="w-8 h-8 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:text-zesty-green hover:border-zesty-green transition-all" aria-label="Facebook">
-              <i data-lucide="facebook" class="w-4 h-4"></i>
-            </a>
-            <a href="#" class="w-8 h-8 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:text-zesty-green hover:border-zesty-green transition-all" aria-label="Instagram">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
-            </a>
-            <a href="#" class="w-8 h-8 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:text-zesty-green hover:border-zesty-green transition-all" aria-label="Youtube">
-              <i data-lucide="youtube" class="w-4 h-4"></i>
-            </a>
-          </div>
         </div>
 
-        <!-- Links -->
+        <!-- Links Products -->
         <div class="space-y-3">
-          <h5 class="text-xs font-extrabold uppercase tracking-wider text-gray-900">Khám Phá</h5>
+          <h5 class="text-xs font-extrabold uppercase tracking-wider text-gray-900">Sản Phẩm</h5>
           <ul class="space-y-2 text-xs text-gray-600">
-            <li><a href="#story" class="hover:text-zesty-green">Sứ mệnh dự án</a></li>
-            <li><a href="#products" class="hover:text-zesty-green">Sản phẩm</a></li>
-            <li><a href="#ingredients" class="hover:text-zesty-green">Thành phần & Dinh dưỡng</a></li>
-            <li><a href="#usage" class="hover:text-zesty-green">Cách dùng & Bảo quản</a></li>
-            <li><a href="#usp" class="hover:text-zesty-green">Cam kết chất lượng</a></li>
-            <li><a href="#b2b" class="hover:text-zesty-green text-amber-700 font-semibold">Hợp tác đối tác</a></li>
+            <li><a href="zesty-spice.html" class="hover:text-zesty-green font-medium">ZESTY SPICE (Bản gốc)</a></li>
+            <li><a href="zesty-spice-thuan-chay.html" class="hover:text-zesty-orange font-medium">ZESTY SPICE Thuần Chay (Coming Soon)</a></li>
           </ul>
         </div>
 
-        <!-- Contact -->
+        <!-- Links Navigation -->
         <div class="space-y-3">
-          <h5 class="text-xs font-extrabold uppercase tracking-wider text-gray-900">Liên Hệ</h5>
+          <h5 class="text-xs font-extrabold uppercase tracking-wider text-gray-900">Liên Kết</h5>
           <ul class="space-y-2 text-xs text-gray-600">
-            <li class="flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-zesty-green"></i> <span class="italic text-gray-400">Cập nhật sau</span></li>
-            <li class="flex items-center gap-1.5"><i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i> <span class="italic text-gray-400">Cập nhật sau</span></li>
-            <li class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-red-400"></i> TP. Hồ Chí Minh</li>
+            <li><a href="#story" class="hover:text-zesty-green">Sứ mệnh</a></li>
+            <li><a href="#products" class="hover:text-zesty-green">Dòng sản phẩm</a></li>
+            <li><a href="#order" class="hover:text-zesty-green">Đặt hàng trực tiếp</a></li>
+            <li><a href="#b2b" class="hover:text-zesty-green">Hợp tác đối tác / B2B</a></li>
           </ul>
-          <div class="pt-2 space-y-1.5">
-            <h5 class="text-xs font-extrabold uppercase tracking-wider text-gray-900">Kênh bán hàng</h5>
-            <p class="text-xs text-gray-400 italic">Cập nhật sau</p>
-          </div>
         </div>
 
       </div>
 
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-3">
-        <p>© 2026 ZESTY SPICE. All rights reserved.</p>
-        <p class="text-center">Made with ❤️ in Vietnam</p>
+      <!-- Required Copyright -->
+      <div class="pt-8 text-center text-xs text-gray-500 space-y-1.5">
+        <p class="font-semibold text-gray-600">© 2026 ZESTY SPICE. All rights reserved.</p>
+        <p class="text-gray-500">Product by HUIT students - Vietnam</p>
+        <p class="text-gray-400">Web by Truong Minh Tien - Eastern International University</p>
       </div>
 
     </div>
   </footer>
 
-
-  <!-- FLOATING QUICK ACTION -->
-  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3">
-    <a href="#" class="w-10 h-10 bg-white text-gray-600 rounded-full shadow-lg border border-gray-200 flex items-center justify-center hover:text-zesty-green hover:border-zesty-green transition-all" title="Lên đầu trang">
-      <i data-lucide="arrow-up" class="w-5 h-5"></i>
-    </a>
-    <a href="#order" class="px-5 py-3 rounded-full bg-zesty-green hover:bg-zesty-greenDark text-white font-extrabold text-sm shadow-xl flex items-center gap-2 hover:scale-105 transition-all">
-      <i data-lucide="send" class="w-4 h-4"></i>
-      <span>Đặt Hàng</span>
-    </a>
-  </div>
-
-
-  <!-- ═══════════════════════════════════════════════════════════
-       JAVASCRIPT
-  ═══════════════════════════════════════════════════════════ -->
   <script>
-    // Initialize icons
+    // Initialize Lucide Icons
     lucide.createIcons();
 
     // Mobile Menu Toggle
@@ -1017,34 +552,6 @@
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
     });
-
-    // Order form submit
-    function handleOrderSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('custName').value;
-      const phone = document.getElementById('custPhone').value;
-      const product = document.querySelector('input[name="productChoice"]:checked').value;
-
-      document.getElementById('orderForm').classList.add('hidden');
-      document.getElementById('orderSuccess').classList.remove('hidden');
-      document.getElementById('successDetails').innerHTML =
-        `Xin chào <strong>${name}</strong> (${phone}), yêu cầu đặt hàng <strong>${product}</strong> đã được ghi nhận. Nhóm ZESTY SPICE sẽ liên hệ xác nhận và báo giá chi tiết trong 24h!`;
-    }
-
-    function resetOrderForm() {
-      document.getElementById('orderForm').reset();
-      document.getElementById('orderForm').classList.remove('hidden');
-      document.getElementById('orderSuccess').classList.add('hidden');
-    }
-
-    // B2B form submit
-    function handleB2BSubmit(e) {
-      e.preventDefault();
-      alert('Cảm ơn Quý đối tác! Nhóm ZESTY SPICE đã tiếp nhận thông tin và sẽ gửi hồ sơ đối tác trong sớm nhất.');
-      e.target.reset();
-    }
   </script>
-
 </body>
 </html>
-
