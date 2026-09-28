@@ -2,7 +2,7 @@
 <html lang="vi" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>ZESTY SPICE – Bột Gia Vị Sinh Thái Từ Vỏ Quả | Chi Tiết Sản Phẩm</title>
 
   <!-- Google Fonts -->
@@ -31,12 +31,11 @@
               greenLight: '#4CAF50',
               lime: '#8BC34A',
               orange: '#D97706',
-              orangeDark: '#B45309',
+              orangeDark: '#9A3412',
               orangeLight: '#F59E0B',
-              cream: '#FDFBF7',
-              beige: '#F7F3EB',
-              sand: '#EFE7DA',
-              charcoal: '#22252A',
+              brown: '#78350F',
+              brownDark: '#451A03',
+              charcoal: '#1C1917',
             }
           }
         }
@@ -45,240 +44,253 @@
   </script>
 
   <style>
+    body {
+      background: linear-gradient(150deg, #EDF6EE 0%, #F6F3EB 30%, #F7EFE4 65%, #EDE1D1 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+    .bg-aura {
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(46, 125, 50, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 50%, rgba(217, 119, 6, 0.12) 0px, transparent 50%),
+        radial-gradient(at 20% 100%, rgba(120, 53, 15, 0.12) 0px, transparent 50%);
+    }
     .nutrition-row:nth-child(odd) { background-color: rgba(46, 125, 50, 0.04); }
   </style>
 </head>
-<body class="bg-zesty-cream text-zesty-charcoal font-sans antialiased selection:bg-zesty-green selection:text-white">
+<body class="text-zesty-charcoal font-sans antialiased selection:bg-zesty-green selection:text-white bg-aura">
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-zesty-sand shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 group">
-        <div class="w-12 h-12 rounded-xl overflow-hidden border border-emerald-100 flex items-center justify-center bg-white shadow-sm">
-          <img src="logo.jpg" alt="ZESTY Logo" class="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform">
+  <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-amber-900/10 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-emerald-200/80 flex items-center justify-center bg-white shadow-sm">
+          <img src="logo.jpg" alt="ZESTY Logo" class="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-300">
         </div>
         <div class="flex flex-col">
-          <span class="text-xl font-black tracking-tight text-zesty-greenDark leading-tight">ZESTY SPICE</span>
-          <span class="text-[10px] uppercase tracking-widest text-emerald-800/80 font-bold">Bột Gia Vị Sinh Thái Từ Vỏ Quả</span>
+          <span class="text-lg sm:text-xl font-black tracking-tight text-zesty-greenDark leading-tight">ZESTY SPICE</span>
+          <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-amber-900/80 font-bold">Bột Gia Vị Sinh Thái Từ Vỏ Quả</span>
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center space-x-7 text-sm font-semibold text-gray-700">
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-semibold text-stone-700">
         <a href="index.html" class="hover:text-zesty-green transition-colors flex items-center gap-1.5">
           <i data-lucide="arrow-left" class="w-4 h-4"></i> Trang Chủ
         </a>
         <a href="index.html#story" class="hover:text-zesty-green transition-colors">Sứ Mệnh</a>
         <a href="index.html#products" class="text-zesty-green font-bold">Sản Phẩm</a>
-        <a href="index.html#b2b" class="hover:text-zesty-green transition-colors text-zesty-orangeDark flex items-center gap-1">
+        <a href="index.html#b2b" class="hover:text-zesty-green transition-colors text-amber-900 flex items-center gap-1 font-bold">
           <i data-lucide="handshake" class="w-4 h-4"></i> Đối Tác
         </a>
       </nav>
 
-      <a href="#order-form" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-zesty-green text-white font-bold text-sm shadow-md shadow-emerald-700/20 hover:bg-zesty-greenDark transition-all active:scale-95">
-        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-        <span>Đặt Mua Ngay</span>
-      </a>
+      <div class="flex items-center space-x-2">
+        <a href="#order-form" class="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-zesty-green to-emerald-800 text-white font-bold text-xs sm:text-sm shadow-md shadow-emerald-900/20 hover:from-zesty-greenDark hover:to-emerald-900 transition-all active:scale-95">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span>Đặt Mua Ngay</span>
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- Breadcrumb -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-    <nav class="flex text-xs text-gray-500 gap-2 items-center">
-      <a href="index.html" class="hover:text-zesty-green">Trang chủ</a>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
+    <nav class="flex text-xs text-stone-600 gap-1.5 sm:gap-2 items-center flex-wrap">
+      <a href="index.html" class="hover:text-zesty-green flex items-center gap-1"><i data-lucide="home" class="w-3.5 h-3.5"></i> Trang chủ</a>
       <span>/</span>
       <a href="index.html#products" class="hover:text-zesty-green">Sản phẩm</a>
       <span>/</span>
-      <span class="text-gray-800 font-bold">ZESTY SPICE</span>
+      <span class="text-stone-900 font-bold">ZESTY SPICE</span>
     </nav>
   </div>
 
   <!-- Product Main Section -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
       
-      <!-- Product Image Column -->
-      <div class="lg:col-span-6 sticky top-28">
-        <div class="bg-white rounded-3xl p-6 border border-zesty-sand shadow-xl overflow-hidden group">
+      <!-- Product Image Column (Responsive Sticky on PC, natural flow on mobile) -->
+      <div class="lg:col-span-6 lg:sticky lg:top-24">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-4 sm:p-6 border border-emerald-900/10 shadow-xl overflow-hidden group">
           <div class="relative overflow-hidden rounded-2xl bg-gradient-to-b from-stone-50 to-emerald-50/40">
             <img src="zesty%20spice%20anhsale.png" alt="ZESTY SPICE - Bột gia vị sinh thái từ vỏ quả" class="w-full h-auto object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute top-4 left-4 bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+            <div class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-emerald-800 text-white text-[10px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full shadow-md">
               Khối lượng: 100g
             </div>
-            <div class="absolute bottom-4 right-4 bg-white/95 text-emerald-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-md border border-emerald-100">
+            <div class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-white/95 text-emerald-900 text-[10px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full shadow-md border border-emerald-100">
               Xuất xứ Việt Nam
             </div>
           </div>
           
           <!-- Key highlights below image -->
-          <div class="grid grid-cols-3 gap-3 mt-6 text-center">
-            <div class="p-3 rounded-2xl bg-zesty-cream border border-zesty-sand">
-              <span class="text-xl">🦐</span>
-              <p class="text-xs font-bold text-gray-800 mt-1">Tôm Khô</p>
-              <p class="text-[10px] text-gray-500">Ngọt đậm tự nhiên</p>
+          <div class="grid grid-cols-3 gap-2 sm:gap-3 mt-4 sm:mt-6 text-center">
+            <div class="p-2 sm:p-3 rounded-2xl bg-emerald-50/60 border border-emerald-100/80">
+              <span class="text-lg sm:text-xl">🦐</span>
+              <p class="text-[11px] sm:text-xs font-bold text-stone-800 mt-1">Tôm Khô</p>
+              <p class="text-[9px] sm:text-[10px] text-stone-500">Ngọt đậm tự nhiên</p>
             </div>
-            <div class="p-3 rounded-2xl bg-zesty-cream border border-zesty-sand">
-              <span class="text-xl">🍄</span>
-              <p class="text-xs font-bold text-gray-800 mt-1">Nấm Đông Cô</p>
-              <p class="text-[10px] text-gray-500">Vị Umami thanh</p>
+            <div class="p-2 sm:p-3 rounded-2xl bg-emerald-50/60 border border-emerald-100/80">
+              <span class="text-lg sm:text-xl">🍄</span>
+              <p class="text-[11px] sm:text-xs font-bold text-stone-800 mt-1">Nấm Đông Cô</p>
+              <p class="text-[9px] sm:text-[10px] text-stone-500">Vị Umami thanh</p>
             </div>
-            <div class="p-3 rounded-2xl bg-zesty-cream border border-zesty-sand">
-              <span class="text-xl">🍊</span>
-              <p class="text-xs font-bold text-gray-800 mt-1">Trần Bì Vỏ Quả</p>
-              <p class="text-[10px] text-gray-500">Thơm ấm, kiện tỳ</p>
+            <div class="p-2 sm:p-3 rounded-2xl bg-emerald-50/60 border border-emerald-100/80">
+              <span class="text-lg sm:text-xl">🍊</span>
+              <p class="text-[11px] sm:text-xs font-bold text-stone-800 mt-1">Trần Bì Vỏ Quả</p>
+              <p class="text-[9px] sm:text-[10px] text-stone-500">Thơm ấm, kiện tỳ</p>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Product Info Column -->
-      <div class="lg:col-span-6 space-y-8">
+      <div class="lg:col-span-6 space-y-6 sm:space-y-8">
         
         <div>
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-zesty-greenDark text-xs font-extrabold uppercase tracking-wide mb-3">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-zesty-greenDark text-xs font-extrabold uppercase tracking-wide mb-2.5">
             <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Bột gia vị sinh thái từ vỏ quả
           </div>
-          <h1 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900 leading-tight">
+          <h1 class="text-2xl sm:text-4xl font-serif font-bold text-stone-900 leading-tight">
             ZESTY SPICE
           </h1>
-          <p class="text-lg text-zesty-green font-medium italic mt-1">
+          <p class="text-base sm:text-lg text-zesty-green font-medium italic mt-1">
             "Nêm chút tinh hoa, thổi hồn món Việt"
           </p>
-          <p class="text-sm text-gray-600 mt-3 leading-relaxed">
+          <p class="text-xs sm:text-sm text-stone-700 mt-3 leading-relaxed">
             Sự kết hợp tinh túy từ trần bì (vỏ quả tự nhiên), tôm khô biển, nấm đông cô cùng các loại thảo mộc thuần Việt giúp khử tanh, tăng chiều sâu hương vị và mang lại bữa ăn lành mạnh cho mọi gia đình.
           </p>
         </div>
 
         <!-- 1. THÀNH PHẦN -->
-        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-zesty-sand shadow-sm space-y-4">
-          <h2 class="text-lg font-bold text-gray-900 flex items-center gap-2 border-b border-gray-100 pb-3">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 sm:p-8 border border-emerald-900/10 shadow-sm space-y-4">
+          <h2 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2 border-b border-stone-100 pb-3">
             <i data-lucide="list-checks" class="w-5 h-5 text-zesty-green"></i>
             Thành Phần Nguyên Liệu
           </h2>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
-            <div class="p-3 bg-zesty-cream rounded-xl border border-gray-100">
-              <span class="font-bold text-gray-800 block">Muối thường</span>
-              <span class="text-gray-500 text-[11px]">Vị mặn nền</span>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 text-xs">
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Muối thường</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Vị mặn nền</span>
             </div>
-            <div class="p-3 bg-zesty-cream rounded-xl border border-gray-100">
-              <span class="font-bold text-gray-800 block">Tôm khô</span>
-              <span class="text-gray-500 text-[11px]">Ngọt thịt biển</span>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Tôm khô</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Ngọt thịt biển</span>
             </div>
-            <div class="p-3 bg-zesty-cream rounded-xl border border-gray-100">
-              <span class="font-bold text-gray-800 block">Nấm đông cô</span>
-              <span class="text-gray-500 text-[11px]">Hương vị umami</span>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Nấm đông cô</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Hương vị umami</span>
             </div>
-            <div class="p-3 bg-zesty-cream rounded-xl border border-gray-100">
-              <span class="font-bold text-gray-800 block">Đường cát</span>
-              <span class="text-gray-500 text-[11px]">Hài hòa vị giác</span>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Đường cát</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Hài hòa vị giác</span>
             </div>
-            <div class="p-3 bg-zesty-cream rounded-xl border border-gray-100">
-              <span class="font-bold text-gray-800 block">Bột tỏi</span>
-              <span class="text-gray-500 text-[11px]">Dậy mùi thơm</span>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Bột tỏi</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Dậy mùi thơm</span>
             </div>
-            <div class="p-3 bg-zesty-cream rounded-xl border border-gray-100">
-              <span class="font-bold text-gray-800 block">Trần bì</span>
-              <span class="text-gray-500 text-[11px]">Vỏ quả tinh túy</span>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Trần bì</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Vỏ quả tinh túy</span>
             </div>
-            <div class="p-3 bg-zesty-cream rounded-xl border border-gray-100">
-              <span class="font-bold text-gray-800 block">Bột gừng</span>
-              <span class="text-gray-500 text-[11px]">Ấm vị, trợ tiêu</span>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Bột gừng</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Ấm vị, trợ tiêu</span>
             </div>
-            <div class="p-3 bg-zesty-cream rounded-xl border border-gray-100">
-              <span class="font-bold text-gray-800 block">Tiêu xay</span>
-              <span class="text-gray-500 text-[11px]">Cay ấm nồng</span>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Tiêu xay</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Cay ấm nồng</span>
             </div>
           </div>
 
           <!-- Cảnh báo dị ứng -->
-          <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-3 mt-4">
-            <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
-            <div class="text-xs text-amber-900">
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-amber-50/90 border border-amber-200 flex items-start gap-2.5 sm:gap-3 mt-4">
+            <i data-lucide="alert-triangle" class="w-4 h-4 sm:w-5 sm:h-5 text-amber-600 shrink-0 mt-0.5"></i>
+            <div class="text-xs text-amber-950">
               <strong class="font-bold">Cảnh báo dị ứng:</strong> Thành phần có chứa <strong>nấm đông cô</strong> và <strong>tôm khô</strong>. Không sử dụng cho người dị ứng với các thành phần trên.
             </div>
           </div>
         </div>
 
         <!-- 2. THÔNG TIN DINH DƯỠNG -->
-        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-zesty-sand shadow-sm space-y-4">
-          <h2 class="text-lg font-bold text-gray-900 flex items-center gap-2 border-b border-gray-100 pb-3">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 sm:p-8 border border-emerald-900/10 shadow-sm space-y-4">
+          <h2 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2 border-b border-stone-100 pb-3">
             <i data-lucide="activity" class="w-5 h-5 text-zesty-green"></i>
             Thông Tin Dinh Dưỡng (Nutrition Facts)
           </h2>
-          <div class="rounded-2xl overflow-hidden border border-gray-200 text-sm">
+          <div class="rounded-2xl overflow-hidden border border-stone-200 text-xs sm:text-sm">
             <table class="w-full">
               <thead>
-                <tr class="bg-zesty-greenDark text-white text-xs">
-                  <th class="text-left px-4 py-2.5 font-bold">Chỉ tiêu dinh dưỡng</th>
-                  <th class="text-right px-4 py-2.5 font-bold">Giá trị / 100g</th>
+                <tr class="bg-zesty-greenDark text-white text-[11px] sm:text-xs">
+                  <th class="text-left px-3 sm:px-4 py-2 sm:py-2.5 font-bold">Chỉ tiêu dinh dưỡng</th>
+                  <th class="text-right px-3 sm:px-4 py-2 sm:py-2.5 font-bold">Giá trị / 100g</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-gray-100">
+              <tbody class="divide-y divide-stone-100">
                 <tr class="nutrition-row">
-                  <td class="px-4 py-2.5 text-gray-700">Energy (Năng lượng)</td>
-                  <td class="px-4 py-2.5 text-right font-bold text-gray-900">230 kcal</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-stone-700">Energy (Năng lượng)</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-right font-bold text-stone-900">230 kcal</td>
                 </tr>
                 <tr class="nutrition-row">
-                  <td class="px-4 py-2.5 text-gray-700">Protein (Chất đạm)</td>
-                  <td class="px-4 py-2.5 text-right font-bold text-gray-900">17g</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-stone-700">Protein (Chất đạm)</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-right font-bold text-stone-900">17g</td>
                 </tr>
                 <tr class="nutrition-row">
-                  <td class="px-4 py-2.5 text-gray-700">Total Fat (Tổng chất béo)</td>
-                  <td class="px-4 py-2.5 text-right font-bold text-gray-900">2g</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-stone-700">Total Fat (Tổng chất béo)</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-right font-bold text-stone-900">2g</td>
                 </tr>
                 <tr class="nutrition-row">
-                  <td class="px-4 py-2.5 text-gray-700">Total Carbohydrate (Tổng Carb)</td>
-                  <td class="px-4 py-2.5 text-right font-bold text-gray-900">37g</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-stone-700">Total Carbohydrate (Tổng Carb)</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-right font-bold text-stone-900">37g</td>
                 </tr>
                 <tr class="nutrition-row">
-                  <td class="px-4 py-2.5 text-gray-700">Sodium (Natri)</td>
-                  <td class="px-4 py-2.5 text-right font-bold text-gray-900">12g</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-stone-700">Sodium (Natri)</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-right font-bold text-stone-900">12g</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="flex items-center gap-2 text-xs text-emerald-800 font-bold bg-emerald-50 px-3 py-2 rounded-xl">
+          <div class="flex items-center gap-2 text-xs text-emerald-900 font-bold bg-emerald-50 px-3 py-2 rounded-xl border border-emerald-100">
             <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
             <span>Cam kết: KHÔNG CHẤT BẢO QUẢN</span>
           </div>
         </div>
 
         <!-- 3. CÁCH DÙNG & BẢO QUẢN -->
-        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-zesty-sand shadow-sm space-y-6">
-          <h2 class="text-lg font-bold text-gray-900 flex items-center gap-2 border-b border-gray-100 pb-3">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 sm:p-8 border border-emerald-900/10 shadow-sm space-y-5 sm:space-y-6">
+          <h2 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2 border-b border-stone-100 pb-3">
             <i data-lucide="chef-hat" class="w-5 h-5 text-zesty-green"></i>
             Hướng Dẫn Sử Dụng & Bảo Quản
           </h2>
           
-          <div class="space-y-3.5 text-xs text-gray-700">
-            <div class="p-3.5 rounded-2xl bg-emerald-50/60 border border-emerald-100 flex gap-3">
+          <div class="space-y-3 text-xs text-stone-700">
+            <div class="p-3 sm:p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-100 flex gap-2.5 sm:gap-3">
               <span class="w-6 h-6 rounded-full bg-zesty-green text-white flex items-center justify-center font-bold text-xs shrink-0">1</span>
               <div>
-                <strong class="font-bold text-gray-900 text-sm block mb-1">Dùng để ướp thịt/cá:</strong>
+                <strong class="font-bold text-stone-900 text-xs sm:text-sm block mb-0.5">Dùng để ướp thịt/cá:</strong>
                 Sử dụng <strong>1 - 2 thìa cà phê</strong> bột gia vị cho <strong>500g nguyên liệu</strong> (thịt heo, gà, tôm, cá). Thoa đều và ướp khoảng 15-30 phút trước khi áp chảo, nướng hoặc kho để đánh bay mùi tanh và dậy mùi thơm.
               </div>
             </div>
 
-            <div class="p-3.5 rounded-2xl bg-amber-50/60 border border-amber-100 flex gap-3">
+            <div class="p-3 sm:p-3.5 rounded-2xl bg-amber-50/70 border border-amber-100 flex gap-2.5 sm:gap-3">
               <span class="w-6 h-6 rounded-full bg-zesty-orange text-white flex items-center justify-center font-bold text-xs shrink-0">2</span>
               <div>
-                <strong class="font-bold text-gray-900 text-sm block mb-1">Dùng để xào:</strong>
+                <strong class="font-bold text-stone-900 text-xs sm:text-sm block mb-0.5">Dùng để xào:</strong>
                 Rắc <strong>1 thìa cà phê</strong> vào các món rau xào, cơm chiên hoặc mì xào ở phút cuối cùng trên chảo để dậy mùi thơm.
               </div>
             </div>
 
-            <div class="p-3.5 rounded-2xl bg-blue-50/60 border border-blue-100 flex gap-3">
+            <div class="p-3 sm:p-3.5 rounded-2xl bg-blue-50/70 border border-blue-100 flex gap-2.5 sm:gap-3">
               <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs shrink-0">3</span>
               <div>
-                <strong class="font-bold text-gray-900 text-sm block mb-1">Dùng để nấu nước dùng/canh:</strong>
+                <strong class="font-bold text-stone-900 text-xs sm:text-sm block mb-0.5">Dùng để nấu nước dùng/canh:</strong>
                 Cho vào nước dùng để lấy hương thơm và vị ngọt hậu của nấm/tôm. Nên kết hợp thêm nước mắm hoặc muối tinh để món canh đạt đủ độ mặn mong muốn.
               </div>
             </div>
           </div>
 
           <!-- Bảo quản & Lưu ý -->
-          <div class="pt-2 space-y-3 border-t border-gray-100 text-xs">
-            <div class="bg-gray-50 p-4 rounded-2xl space-y-1.5 text-gray-700">
-              <p class="font-bold text-gray-900 text-xs flex items-center gap-1.5">
+          <div class="pt-2 space-y-3 border-t border-stone-100 text-xs">
+            <div class="bg-stone-50 p-3.5 sm:p-4 rounded-2xl space-y-1.5 text-stone-700">
+              <p class="font-bold text-stone-900 text-xs flex items-center gap-1.5">
                 <i data-lucide="archive" class="w-4 h-4 text-emerald-700"></i> Hướng dẫn bảo quản:
               </p>
               <p>• Sau khi sử dụng, cần đóng chặt cả hai nắp để ngăn không khí lọt vào.</p>
@@ -287,7 +299,7 @@
               <p>• <strong>HSD:</strong> 3-4 tháng kể từ ngày sản xuất khi bảo quản đúng cách ở nhiệt độ phòng.</p>
             </div>
 
-            <div class="bg-red-50 p-3.5 rounded-2xl border border-red-100 flex items-start gap-2.5 text-red-800">
+            <div class="bg-red-50 p-3 sm:p-3.5 rounded-2xl border border-red-100 flex items-start gap-2.5 text-red-900">
               <i data-lucide="info" class="w-4 h-4 text-red-600 shrink-0 mt-0.5"></i>
               <span><strong>*Lưu ý:</strong> Không rắc trực tiếp sản phẩm phía trên thức ăn đang sôi hoặc bốc hơi nhanh. Hơi nước nhiều sẽ làm gia vị kẹt lại và gây ẩm mốc.</span>
             </div>
@@ -295,10 +307,10 @@
         </div>
 
         <!-- 4. FORM ĐẶT MUA HÀNG -->
-        <div id="order-form" class="bg-gradient-to-br from-emerald-900 to-stone-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl space-y-5">
+        <div id="order-form" class="bg-gradient-to-br from-[#142816] via-[#1F2618] to-[#2B1B10] text-white rounded-3xl p-4 sm:p-8 shadow-2xl space-y-4 sm:space-y-5">
           <div class="text-center space-y-2">
-            <span class="inline-block px-3 py-1 bg-amber-400 text-stone-950 text-xs font-black rounded-full uppercase">Đặt Hàng Trực Tiếp</span>
-            <h3 class="text-2xl font-serif font-bold text-white">Form Đặt Mua ZESTY SPICE</h3>
+            <span class="inline-block px-3 py-1 bg-amber-400 text-stone-950 text-[10px] sm:text-xs font-black rounded-full uppercase">Đặt Hàng Trực Tiếp</span>
+            <h3 class="text-xl sm:text-2xl font-serif font-bold text-white">Form Đặt Mua ZESTY SPICE</h3>
             <p class="text-xs text-emerald-100 max-w-md mx-auto">
               Vui lòng điền thông tin vào biểu mẫu bên dưới. Đội ngũ ZESTY sẽ liên hệ xác nhận và giao hàng nhanh chóng đến bạn!
             </p>
@@ -313,13 +325,13 @@
               frameborder="0" 
               marginheight="0" 
               marginwidth="0" 
-              class="w-full rounded-xl">
+              class="w-full min-h-[600px] sm:min-h-[750px] rounded-xl">
               Đang tải biểu mẫu...
             </iframe>
           </div>
 
           <div class="text-center pt-2">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSekX3g9NfUqxKpfp70flB49F20yHbxoy_L_nklwIfCZSHnMNg/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs text-amber-300 hover:text-amber-200 underline font-semibold">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSekX3g9NfUqxKpfp70flB49F20yHbxoy_L_nklwIfCZSHnMNg/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-amber-300 hover:text-amber-200 underline font-semibold">
               <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Mở biểu mẫu đặt hàng trong tab mới nếu không tải được
             </a>
           </div>
@@ -331,37 +343,37 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-zesty-cream border-t border-gray-200 pt-14 pb-10 mt-20">
+  <footer class="border-t border-amber-900/10 pt-12 sm:pt-14 pb-10 mt-14 sm:mt-20 bg-white/40 backdrop-blur-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-gray-200">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pb-10 border-b border-amber-900/10">
         
-        <div class="lg:col-span-2 space-y-4">
+        <div class="lg:col-span-2 space-y-3 sm:space-y-4">
           <div class="flex items-center gap-3">
-            <img src="logo.jpg" alt="ZESTY Logo" class="w-10 h-10 object-contain rounded-lg">
+            <img src="logo.jpg" alt="ZESTY Logo" class="w-10 h-10 object-contain rounded-lg shadow-sm border border-emerald-200">
             <div>
-              <span class="text-xl font-black text-zesty-greenDark block leading-none">ZESTY SPICE</span>
-              <span class="text-[10px] text-emerald-700 font-bold tracking-wide">Bột Gia Vị Sinh Thái Từ Vỏ Quả</span>
+              <span class="text-lg sm:text-xl font-black text-zesty-greenDark block leading-none">ZESTY SPICE</span>
+              <span class="text-[10px] text-amber-900 font-bold tracking-wide">Bột Gia Vị Sinh Thái Từ Vỏ Quả</span>
             </div>
           </div>
-          <p class="text-xs text-gray-600 leading-relaxed max-w-sm italic">
+          <p class="text-xs text-stone-600 leading-relaxed max-w-sm italic">
             "Nêm chút tinh hoa, thổi hồn món Việt"
           </p>
-          <p class="text-xs text-gray-500 leading-relaxed max-w-sm">
+          <p class="text-xs text-stone-500 leading-relaxed max-w-sm">
             Gia vị sinh thái từ vỏ quả tự nhiên, mang đến giải pháp nêm nếm lành mạnh cho mọi bữa cơm gia đình Việt — không chất bảo quản, không phẩm màu.
           </p>
         </div>
 
-        <div class="space-y-3">
-          <h5 class="text-xs font-extrabold uppercase tracking-wider text-gray-900">Sản Phẩm</h5>
-          <ul class="space-y-2 text-xs text-gray-600">
+        <div class="space-y-2.5 sm:space-y-3">
+          <h5 class="text-xs font-extrabold uppercase tracking-wider text-stone-900">Sản Phẩm</h5>
+          <ul class="space-y-2 text-xs text-stone-600">
             <li><a href="zesty-spice.html" class="text-zesty-green font-bold">ZESTY SPICE (Bản gốc)</a></li>
-            <li><a href="zesty-spice-thuan-chay.html" class="hover:text-zesty-green">ZESTY SPICE Thuần Chay (Coming Soon)</a></li>
+            <li><a href="zesty-spice-thuan-chay.html" class="hover:text-zesty-orange font-medium">ZESTY SPICE Thuần Chay (Coming Soon)</a></li>
           </ul>
         </div>
 
-        <div class="space-y-3">
-          <h5 class="text-xs font-extrabold uppercase tracking-wider text-gray-900">Điều Hướng</h5>
-          <ul class="space-y-2 text-xs text-gray-600">
+        <div class="space-y-2.5 sm:space-y-3">
+          <h5 class="text-xs font-extrabold uppercase tracking-wider text-stone-900">Điều Hướng</h5>
+          <ul class="space-y-2 text-xs text-stone-600">
             <li><a href="index.html" class="hover:text-zesty-green">Trang chủ</a></li>
             <li><a href="index.html#story" class="hover:text-zesty-green">Sứ mệnh</a></li>
             <li><a href="index.html#b2b" class="hover:text-zesty-green">Dành cho đối tác</a></li>
@@ -370,10 +382,10 @@
 
       </div>
 
-      <div class="pt-8 text-center text-xs text-gray-500 space-y-1.5">
-        <p class="font-semibold text-gray-600">© 2026 ZESTY SPICE. All rights reserved.</p>
-        <p class="text-gray-500">Product by HUIT students - Vietnam</p>
-        <p class="text-gray-400">Web by Truong Minh Tien - Eastern International University</p>
+      <div class="pt-8 text-center text-xs text-stone-500 space-y-1.5">
+        <p class="font-semibold text-stone-700">© 2026 ZESTY SPICE. All rights reserved.</p>
+        <p class="text-stone-600">Product by HUIT students - Vietnam</p>
+        <p class="text-stone-500">Web by Truong Minh Tien - Eastern International University</p>
       </div>
     </div>
   </footer>
