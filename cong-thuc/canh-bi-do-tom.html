@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Canh Bí Đỏ Tôm Tươi – Công Thức ZESTY SPICE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            zesty: {
+              green: '#2E7D32', greenDark: '#1B5E20', greenLight: '#4CAF50',
+              orange: '#D97706', orangeDark: '#9A3412', orangeLight: '#F59E0B',
+              brown: '#78350F', brownDark: '#451A03', charcoal: '#1C1917',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background: linear-gradient(150deg, #EDF6EE 0%, #F6F3EB 30%, #F7EFE4 65%, #EDE1D1 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+    .bg-aura {
+      background-image:
+        radial-gradient(at 0% 0%, rgba(46, 125, 50, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 50%, rgba(217, 119, 6, 0.12) 0px, transparent 50%),
+        radial-gradient(at 20% 100%, rgba(120, 53, 15, 0.12) 0px, transparent 50%);
+    }
+  </style>
+</head>
+<body class="text-zesty-charcoal font-sans antialiased selection:bg-zesty-green selection:text-white bg-aura">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-amber-900/10 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2.5 sm:gap-3 group">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-emerald-200/80 flex items-center justify-center bg-white shadow-sm">
+          <img src="../logo.jpg" alt="ZESTY Logo" class="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg sm:text-xl font-black tracking-tight text-zesty-greenDark leading-tight">ZESTY SPICE</span>
+          <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-amber-900/80 font-bold">Bột Gia Vị Sinh Thái Từ Vỏ Quả</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-stone-700">
+        <a href="../index.html" class="hover:text-zesty-green transition-colors flex items-center gap-1.5">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Trang Chủ
+        </a>
+        <a href="../index.html#recipes" class="text-zesty-green font-bold flex items-center gap-1">
+          <i data-lucide="utensils" class="w-4 h-4"></i> Công Thức
+        </a>
+        <a href="../index.html#products" class="hover:text-zesty-green transition-colors">Sản Phẩm</a>
+      </nav>
+
+      <a href="../index.html#order" class="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-zesty-green to-emerald-800 text-white font-bold text-xs sm:text-sm shadow-md hover:from-zesty-greenDark transition-all active:scale-95">
+        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+        <span>Đặt Mua Ngay</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
+    <nav class="flex text-xs text-stone-600 gap-1.5 sm:gap-2 items-center flex-wrap">
+      <a href="../index.html" class="hover:text-zesty-green flex items-center gap-1"><i data-lucide="home" class="w-3.5 h-3.5"></i> Trang chủ</a>
+      <span>/</span>
+      <a href="../index.html#recipes" class="hover:text-zesty-green">Công thức</a>
+      <span>/</span>
+      <span class="text-stone-900 font-bold">Canh Bí Đỏ Tôm Tươi</span>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+      <!-- Left: Image + Quick Info (Sticky on PC) -->
+      <div class="lg:col-span-5 lg:sticky lg:top-24 space-y-4">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-4 sm:p-6 border border-sky-900/10 shadow-xl overflow-hidden group">
+          <div class="relative overflow-hidden rounded-2xl bg-gradient-to-b from-stone-50 to-sky-50/40">
+            <img src="canh-bi-do-tom.jpg" alt="Canh Bí Đỏ Tôm Tươi ZESTY SPICE" class="w-full h-auto object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-sky-700 text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full shadow-md">
+              Nêm Canh
+            </div>
+            <div class="absolute bottom-3 right-3 bg-white/95 text-stone-900 text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full shadow-md border border-sky-100">
+              3–4 người ăn
+            </div>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-3 mt-4 text-center">
+            <div class="p-2 sm:p-3 rounded-2xl bg-sky-50/60 border border-sky-100/80">
+              <i data-lucide="clock" class="w-4 h-4 text-sky-600 mx-auto mb-1"></i>
+              <p class="text-[11px] sm:text-xs font-bold text-stone-800">5 phút</p>
+              <p class="text-[9px] sm:text-[10px] text-stone-500">Sơ chế</p>
+            </div>
+            <div class="p-2 sm:p-3 rounded-2xl bg-sky-50/60 border border-sky-100/80">
+              <i data-lucide="flame" class="w-4 h-4 text-sky-600 mx-auto mb-1"></i>
+              <p class="text-[11px] sm:text-xs font-bold text-stone-800">15 phút</p>
+              <p class="text-[9px] sm:text-[10px] text-stone-500">Thời gian nấu</p>
+            </div>
+            <div class="p-2 sm:p-3 rounded-2xl bg-sky-50/60 border border-sky-100/80">
+              <i data-lucide="users" class="w-4 h-4 text-sky-600 mx-auto mb-1"></i>
+              <p class="text-[11px] sm:text-xs font-bold text-stone-800">3–4</p>
+              <p class="text-[9px] sm:text-[10px] text-stone-500">Khẩu phần</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ZESTY SPICE Usage Box -->
+        <div class="bg-gradient-to-br from-emerald-800 to-emerald-950 text-white rounded-3xl p-4 sm:p-5 shadow-lg space-y-2">
+          <p class="text-xs font-extrabold uppercase tracking-widest text-amber-300">ZESTY SPICE trong món này</p>
+          <p class="text-xl sm:text-2xl font-serif font-bold">1 thìa cà phê</p>
+          <p class="text-xs text-emerald-200 leading-relaxed">Nêm vào canh sau cùng, khi bí vừa chín tới, thay hoàn toàn hạt nêm và bột ngọt. ZESTY SPICE chỉ làm đúng vai trò gia vị — không can thiệp nguyên liệu chính.</p>
+          <div class="flex items-center gap-2 pt-1 text-[11px] text-amber-200 font-semibold">
+            <i data-lucide="info" class="w-3.5 h-3.5 shrink-0"></i>
+            <span>Nêm sau cùng để giữ hương thơm gừng & trần bì.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Recipe Info -->
+      <div class="lg:col-span-7 space-y-6 sm:space-y-8">
+
+        <!-- Title -->
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-900 text-xs font-extrabold uppercase tracking-wide mb-2.5">
+            <i data-lucide="soup" class="w-3.5 h-3.5"></i> Công thức ZESTY SPICE – Nêm Canh
+          </div>
+          <h1 class="text-2xl sm:text-4xl font-serif font-bold text-stone-900 leading-tight">
+            Canh Bí Đỏ Tôm Tươi
+          </h1>
+          <p class="text-base sm:text-lg text-zesty-green font-medium italic mt-1">
+            Ngọt thanh tự nhiên, không bột ngọt, nước dùng trong vắt
+          </p>
+          <p class="text-xs sm:text-sm text-stone-700 mt-3 leading-relaxed">
+            Canh bí đỏ tôm tươi vốn đã ngọt tự nhiên. Thay vì dùng hạt nêm (thường có bột ngọt và phụ gia), <strong>1 thìa cà phê ZESTY SPICE</strong> nêm vào cuối giúp tăng chiều sâu hương vị nhờ tiêu + gừng + bột tỏi, giữ nguyên sự thanh sạch mà không che lấp vị ngọt của tôm và bí.
+          </p>
+        </div>
+
+        <!-- Nguyên liệu -->
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 sm:p-8 border border-emerald-900/10 shadow-sm space-y-4">
+          <h2 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2 border-b border-stone-100 pb-3">
+            <i data-lucide="shopping-basket" class="w-5 h-5 text-zesty-green"></i>
+            Nguyên Liệu (3–4 người ăn)
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm">
+            <div class="flex items-center gap-3 p-3 bg-orange-50/70 rounded-2xl border border-orange-100">
+              <span class="text-xl">🎃</span>
+              <div><span class="font-bold text-stone-900 block">Bí đỏ</span><span class="text-stone-500">500g (gọt vỏ, bỏ ruột)</span></div>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-sky-50/70 rounded-2xl border border-sky-100">
+              <span class="text-xl">🦐</span>
+              <div><span class="font-bold text-stone-900 block">Tôm sú / tôm thẻ tươi</span><span class="text-stone-500">250g (lột vỏ, rút chỉ đen)</span></div>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-emerald-50/70 rounded-2xl border border-emerald-100">
+              <span class="text-xl">🌿</span>
+              <div><span class="font-bold text-stone-900 block">ZESTY SPICE</span><span class="text-emerald-700 font-semibold">1 thìa cà phê</span></div>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-stone-50 rounded-2xl border border-stone-100">
+              <span class="text-xl">🧅</span>
+              <div><span class="font-bold text-stone-900 block">Hành tím</span><span class="text-stone-500">2 củ (băm nhuyễn)</span></div>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-stone-50 rounded-2xl border border-stone-100">
+              <span class="text-xl">🫒</span>
+              <div><span class="font-bold text-stone-900 block">Dầu ăn</span><span class="text-stone-500">1 thìa canh</span></div>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-stone-50 rounded-2xl border border-stone-100">
+              <span class="text-xl">🫙</span>
+              <div><span class="font-bold text-stone-900 block">Nước mắm</span><span class="text-stone-500">1 thìa canh (nêm sau cùng nếu cần)</span></div>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-stone-50 rounded-2xl border border-stone-100 sm:col-span-2">
+              <span class="text-xl">🌱</span>
+              <div><span class="font-bold text-stone-900 block">Hành lá, ngò rí</span><span class="text-stone-500">Vừa đủ để trang trí + 1 lít nước lọc</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Các bước thực hiện -->
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 sm:p-8 border border-emerald-900/10 shadow-sm space-y-5">
+          <h2 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2 border-b border-stone-100 pb-3">
+            <i data-lucide="chef-hat" class="w-5 h-5 text-zesty-green"></i>
+            Các Bước Thực Hiện
+          </h2>
+
+          <div class="space-y-3 text-xs sm:text-sm text-stone-700">
+
+            <div class="p-3.5 sm:p-4 rounded-2xl bg-stone-50/80 border border-stone-100 flex gap-3 sm:gap-4">
+              <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-sky-600 text-white flex items-center justify-center font-black text-xs sm:text-sm shrink-0">1</span>
+              <div>
+                <strong class="font-bold text-stone-900 text-xs sm:text-sm block mb-1">Sơ chế nguyên liệu:</strong>
+                Bí đỏ gọt vỏ, bỏ ruột, cắt miếng vuông 2–3 cm vừa ăn. Tôm rửa sạch, lột vỏ, bỏ đầu, rút chỉ đen ở sống lưng, để ráo. Hành lá và ngò cắt nhỏ. Hành tím băm nhuyễn.
+              </div>
+            </div>
+
+            <div class="p-3.5 sm:p-4 rounded-2xl bg-sky-50/60 border border-sky-100 flex gap-3 sm:gap-4">
+              <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-sky-500 text-white flex items-center justify-center font-black text-xs sm:text-sm shrink-0">2</span>
+              <div>
+                <strong class="font-bold text-stone-900 text-xs sm:text-sm block mb-1">Phi thơm và xào tôm:</strong>
+                Đun nóng nồi với 1 thìa dầu ăn, phi thơm hành tím băm đến khi vàng thơm. Cho tôm vào xào săn khoảng <strong>1–2 phút</strong> đến khi tôm vừa chuyển hồng. Trút tôm ra đĩa riêng, giữ nguyên nồi.
+              </div>
+            </div>
+
+            <div class="p-3.5 sm:p-4 rounded-2xl bg-orange-50/60 border border-orange-100 flex gap-3 sm:gap-4">
+              <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-black text-xs sm:text-sm shrink-0">3</span>
+              <div>
+                <strong class="font-bold text-stone-900 text-xs sm:text-sm block mb-1">Nấu bí đỏ:</strong>
+                Đổ <strong>1 lít nước lọc</strong> vào nồi vừa xào tôm, đun sôi. Khi nước sôi, cho bí đỏ vào, nấu ở lửa vừa khoảng <strong>10–12 phút</strong> đến khi bí vừa mềm. Không nấu quá tay sẽ làm bí nát, nước đục.
+              </div>
+            </div>
+
+            <div class="p-3.5 sm:p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100 flex gap-3 sm:gap-4">
+              <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-emerald-700 text-white flex items-center justify-center font-black text-xs sm:text-sm shrink-0">4</span>
+              <div>
+                <strong class="font-bold text-stone-900 text-xs sm:text-sm block mb-1">Nêm ZESTY SPICE:</strong>
+                Khi bí đã chín mềm, cho tôm đã xào vào lại nồi. Rắc <strong class="text-emerald-700">1 thìa cà phê ZESTY SPICE</strong> vào, khuấy nhẹ và nấu thêm 2 phút. Nếm thử — nếu cần mặn hơn thì thêm 1 thìa nước mắm.
+              </div>
+            </div>
+
+            <div class="p-3.5 sm:p-4 rounded-2xl bg-stone-50/80 border border-stone-100 flex gap-3 sm:gap-4">
+              <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-stone-600 text-white flex items-center justify-center font-black text-xs sm:text-sm shrink-0">5</span>
+              <div>
+                <strong class="font-bold text-stone-900 text-xs sm:text-sm block mb-1">Hoàn thiện:</strong>
+                Tắt bếp, rắc hành lá và ngò lên trên. Múc ra tô, dùng ngay khi còn nóng cùng cơm trắng.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bí quyết -->
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 sm:p-8 border border-emerald-900/10 shadow-sm space-y-4">
+          <h2 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2 border-b border-stone-100 pb-3">
+            <i data-lucide="lightbulb" class="w-5 h-5 text-zesty-green"></i>
+            Bí Quyết Để Canh Ngon
+          </h2>
+          <div class="space-y-2.5 text-xs sm:text-sm">
+            <div class="flex items-start gap-3 p-3 rounded-2xl bg-emerald-50/60 border border-emerald-100">
+              <i data-lucide="key" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+              <p class="text-stone-700">Nêm ZESTY SPICE <strong>sau cùng</strong>, không nêm từ đầu — giữ hương gừng và trần bì không bay đi khi nấu lâu.</p>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-2xl bg-sky-50/60 border border-sky-100">
+              <i data-lucide="key" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
+              <p class="text-stone-700">Bí đỏ chín đúng tới cho nước trong vàng đẹp. Nấu quá tay bí nát thành bột, nước canh đục và mất thẩm mỹ.</p>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-2xl bg-stone-50/80 border border-stone-100">
+              <i data-lucide="key" class="w-4 h-4 text-stone-500 shrink-0 mt-0.5"></i>
+              <p class="text-stone-700">ZESTY SPICE thay hoàn toàn hạt nêm và bột ngọt trong món này — canh sạch hơn, không để lại hậu vị ngọt nhân tạo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gợi ý công thức khác -->
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 sm:p-8 border border-emerald-900/10 shadow-sm">
+          <h2 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2 border-b border-stone-100 pb-3 mb-4">
+            <i data-lucide="utensils" class="w-5 h-5 text-zesty-green"></i>
+            Công Thức Khác Của ZESTY SPICE
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href="suon-non-nuong.html" class="flex items-center gap-3 p-3 rounded-2xl bg-amber-50/70 border border-amber-100 hover:border-amber-400 transition-colors group">
+              <img src="suon-non-nuong.jpg" alt="Sườn Non Nướng Mật Ong" class="w-14 h-14 rounded-xl object-cover shrink-0">
+              <div>
+                <p class="text-xs font-bold text-stone-900 group-hover:text-amber-700 transition-colors">Sườn Non Nướng Mật Ong</p>
+                <p class="text-[10px] text-stone-500 mt-0.5">Ướp & Nướng · 60 phút ướp · 4–5 người</p>
+              </div>
+            </a>
+            <a href="com-chien-rau-cu.html" class="flex items-center gap-3 p-3 rounded-2xl bg-emerald-50/70 border border-emerald-100 hover:border-emerald-400 transition-colors group">
+              <img src="com-chien-rau-cu.jpg" alt="Cơm Chiên Trứng Rau Củ" class="w-14 h-14 rounded-xl object-cover shrink-0">
+              <div>
+                <p class="text-xs font-bold text-stone-900 group-hover:text-emerald-700 transition-colors">Cơm Chiên Trứng Rau Củ</p>
+                <p class="text-[10px] text-stone-500 mt-0.5">Xào & Chiên · 15 phút · 2 người</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-amber-900/10 pt-10 pb-8 mt-14 bg-white/40 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-stone-500 space-y-1.5">
+      <p class="font-semibold text-stone-700">© 2026 ZESTY SPICE. All rights reserved.</p>
+      <p class="text-stone-600">Product by HUIT students - Vietnam</p>
+      <p class="text-stone-500">Web by Truong Minh Tien - Eastern International University</p>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
