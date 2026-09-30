@@ -13,8 +13,8 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide Icons CDN (Pinned Version for Stability & Security) -->
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
 
   <script>
     tailwind.config = {
@@ -134,6 +134,9 @@
         <a href="#hero" class="hover:text-zesty-green transition-colors">Trang Chủ</a>
         <a href="#story" class="hover:text-zesty-green transition-colors">Sứ Mệnh</a>
         <a href="#products" class="hover:text-zesty-green transition-colors">Sản Phẩm</a>
+        <a href="#recipes" class="hover:text-zesty-green transition-colors flex items-center gap-1">
+          <i data-lucide="utensils" class="w-4 h-4"></i> Công Thức
+        </a>
         <a href="#order" class="hover:text-zesty-green transition-colors">Đặt Hàng</a>
         <a href="#b2b" class="text-amber-800 hover:text-zesty-orange transition-colors flex items-center gap-1 font-bold">
           <i data-lucide="handshake" class="w-4 h-4"></i> Đối Tác
@@ -157,6 +160,7 @@
       <a href="#hero" class="block px-3 py-2.5 rounded-xl text-base font-medium text-stone-800 hover:bg-emerald-50 hover:text-zesty-green">Trang Chủ</a>
       <a href="#story" class="block px-3 py-2.5 rounded-xl text-base font-medium text-stone-800 hover:bg-emerald-50 hover:text-zesty-green">Sứ Mệnh</a>
       <a href="#products" class="block px-3 py-2.5 rounded-xl text-base font-medium text-stone-800 hover:bg-emerald-50 hover:text-zesty-green">Sản Phẩm</a>
+      <a href="#recipes" class="block px-3 py-2.5 rounded-xl text-base font-medium text-stone-800 hover:bg-emerald-50 hover:text-zesty-green">🍳 Công Thức Gợi Ý</a>
       <a href="#order" class="block px-3 py-2.5 rounded-xl text-base font-medium text-stone-800 hover:bg-emerald-50 hover:text-zesty-green">Đặt Hàng</a>
       <a href="#b2b" class="block px-3 py-2.5 rounded-xl text-base font-bold text-amber-900 hover:bg-amber-50">Dành Cho Đối Tác</a>
       <a href="#order" class="w-full text-center mt-3 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-zesty-green to-emerald-800 text-white font-bold shadow-md">
@@ -422,6 +426,121 @@
 
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CÔNG THỨC GỢI Ý (RECIPE CARDS)
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="recipes" class="py-14 sm:py-20 bg-white/60 backdrop-blur-sm border-t border-amber-900/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14 space-y-3">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-zesty-green">Vào bếp cùng ZESTY SPICE</span>
+        <h2 class="text-2xl sm:text-4xl font-serif font-bold text-stone-900">
+          Công Thức Gợi Ý
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-emerald-600 to-amber-600 mx-auto rounded-full"></div>
+        <p class="text-stone-600 text-xs sm:text-sm">Ba cách dùng thực chiến: ướp thịt, nêm canh và xào — một hũ ZESTY SPICE, vạn món thơm ngon.</p>
+      </div>
+
+      <!-- 4 Recipe Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+
+        <!-- Card 1: Sườn non nướng -->
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl border border-emerald-800/15 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col group">
+          <div class="overflow-hidden aspect-video">
+            <img src="cong-thuc/suon-non-nuong.jpg" alt="Sườn Non Nướng Mật Ong" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="p-4 sm:p-5 flex flex-col flex-1 gap-3">
+            <div>
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-bold text-[10px] uppercase tracking-wider mb-2">
+                <i data-lucide="flame" class="w-3 h-3"></i> Ướp & Nướng
+              </span>
+              <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-zesty-green transition-colors leading-snug">Sườn Non Nướng Mật Ong</h3>
+              <p class="text-[11px] sm:text-xs text-stone-500 mt-1 leading-relaxed line-clamp-2">Ướp 2.5 thìa ZESTY SPICE + mật ong, trần bì dậy mùi thơm đặc trưng khi nướng vàng giòn.</p>
+            </div>
+            <div class="mt-auto flex items-center gap-2 text-[10px] sm:text-[11px] text-stone-500 font-medium">
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 60 phút ướp</span>
+              <span class="mx-1 text-stone-300">·</span>
+              <span class="flex items-center gap-1"><i data-lucide="users" class="w-3 h-3"></i> 4–5 người</span>
+            </div>
+            <div class="pt-1 border-t border-stone-100 text-[10px] sm:text-[11px] font-semibold text-zesty-green flex items-center gap-1">
+              <i data-lucide="star" class="w-3 h-3 text-amber-500"></i>
+              Dùng: 2.5 thìa cà phê / 1kg sườn
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Canh bí đỏ tôm tươi -->
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl border border-emerald-800/15 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col group">
+          <div class="overflow-hidden aspect-video">
+            <img src="cong-thuc/canh-bi-do-tom.jpg" alt="Canh Bí Đỏ Tôm Tươi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="p-4 sm:p-5 flex flex-col flex-1 gap-3">
+            <div>
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-sky-100 text-sky-900 font-bold text-[10px] uppercase tracking-wider mb-2">
+                <i data-lucide="soup" class="w-3 h-3"></i> Nêm Canh
+              </span>
+              <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-zesty-green transition-colors leading-snug">Canh Bí Đỏ Tôm Tươi</h3>
+              <p class="text-[11px] sm:text-xs text-stone-500 mt-1 leading-relaxed line-clamp-2">Nêm 1 thìa ZESTY SPICE vào canh thay hạt nêm — ngọt thanh tự nhiên, không bột ngọt.</p>
+            </div>
+            <div class="mt-auto flex items-center gap-2 text-[10px] sm:text-[11px] text-stone-500 font-medium">
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 20 phút</span>
+              <span class="mx-1 text-stone-300">·</span>
+              <span class="flex items-center gap-1"><i data-lucide="users" class="w-3 h-3"></i> 3–4 người</span>
+            </div>
+            <div class="pt-1 border-t border-stone-100 text-[10px] sm:text-[11px] font-semibold text-zesty-green flex items-center gap-1">
+              <i data-lucide="star" class="w-3 h-3 text-amber-500"></i>
+              Dùng: 1 thìa cà phê / 1 lít nước
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Cơm chiên trứng rau củ -->
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl border border-emerald-800/15 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col group">
+          <div class="overflow-hidden aspect-video">
+            <img src="cong-thuc/com-chien-rau-cu.jpg" alt="Cơm Chiên Trứng Rau Củ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+          <div class="p-4 sm:p-5 flex flex-col flex-1 gap-3">
+            <div>
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 font-bold text-[10px] uppercase tracking-wider mb-2">
+                <i data-lucide="chef-hat" class="w-3 h-3"></i> Xào & Chiên
+              </span>
+              <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-zesty-green transition-colors leading-snug">Cơm Chiên Trứng Rau Củ</h3>
+              <p class="text-[11px] sm:text-xs text-stone-500 mt-1 leading-relaxed line-clamp-2">Rắc 1 thìa ZESTY SPICE vào phút cuối trên lửa lớn — gừng & trần bì dậy mùi xào chảo thơm phức.</p>
+            </div>
+            <div class="mt-auto flex items-center gap-2 text-[10px] sm:text-[11px] text-stone-500 font-medium">
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 15 phút</span>
+              <span class="mx-1 text-stone-300">·</span>
+              <span class="flex items-center gap-1"><i data-lucide="users" class="w-3 h-3"></i> 2 người</span>
+            </div>
+            <div class="pt-1 border-t border-stone-100 text-[10px] sm:text-[11px] font-semibold text-zesty-green flex items-center gap-1">
+              <i data-lucide="star" class="w-3 h-3 text-amber-500"></i>
+              Dùng: 1 thìa cà phê / 3–4 chén cơm
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Coming Soon (placeholder) -->
+        <div class="bg-white/60 backdrop-blur-md rounded-3xl border-2 border-dashed border-amber-400/60 shadow-sm flex flex-col items-center justify-center p-6 sm:p-8 text-center min-h-[280px] gap-4">
+          <div class="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center shadow-inner">
+            <i data-lucide="sparkles" class="w-7 h-7 text-amber-500"></i>
+          </div>
+          <div class="space-y-1.5">
+            <p class="text-sm sm:text-base font-bold text-amber-800">Món mới sắp ra mắt</p>
+            <p class="text-[11px] sm:text-xs text-stone-500 leading-relaxed">
+              Công thức tiếp theo đang được chúng tôi chuẩn bị.<br>
+              <span class="font-semibold text-amber-700">Bạn đón chờ nhé! 🌿</span>
+            </p>
+          </div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-800 font-bold text-[10px] uppercase tracking-widest">
+            <i data-lucide="clock" class="w-3 h-3"></i> Sắp cập nhật
+          </span>
+        </div>
+
+      </div>
     </div>
   </section>
 
