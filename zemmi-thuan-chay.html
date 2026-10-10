@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>ZEMMI THUẦN CHAY – Bột Gia Vị Sinh Thái Từ Vỏ Quả | Chi Tiết Sản Phẩm</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            zesty: {
+              green: '#2E7D32',
+              greenDark: '#1B5E20',
+              greenLight: '#4CAF50',
+              lime: '#8BC34A',
+              orange: '#D97706',
+              orangeDark: '#9A3412',
+              orangeLight: '#F59E0B',
+              brown: '#78350F',
+              brownDark: '#451A03',
+              charcoal: '#1C1917',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background: linear-gradient(150deg, #EDF6EE 0%, #F6F3EB 30%, #F7EFE4 65%, #EDE1D1 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+    .bg-aura {
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(46, 125, 50, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 50%, rgba(217, 119, 6, 0.12) 0px, transparent 50%),
+        radial-gradient(at 20% 100%, rgba(120, 53, 15, 0.12) 0px, transparent 50%);
+    }
+    .nutrition-row:nth-child(odd) { background-color: rgba(217, 119, 6, 0.05); }
+    
+    /* Ribbon styling */
+    .ribbon-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      z-index: 20;
+      pointer-events: none;
+    }
+    .ribbon-tag {
+      position: absolute;
+      top: 24px;
+      right: -32px;
+      transform: rotate(45deg);
+      width: 135px;
+      background: linear-gradient(135deg, #F59E0B, #B45309);
+      color: white;
+      text-align: center;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      padding: 5px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 640px) {
+      .ribbon-wrapper {
+        width: 140px;
+        height: 140px;
+      }
+      .ribbon-tag {
+        top: 28px;
+        right: -36px;
+        width: 155px;
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+<body class="text-zesty-charcoal font-sans antialiased selection:bg-zesty-orange selection:text-white bg-aura">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-amber-900/10 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden border border-emerald-200/80 flex items-center justify-center bg-white shadow-sm">
+          <img src="logo.jpg" alt="ZEMMI Logo" class="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg sm:text-xl font-black tracking-tight text-zesty-greenDark leading-tight">ZEMMI</span>
+          <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-amber-900/80 font-bold">Bột Gia Vị Sinh Thái Từ Vỏ Quả</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-semibold text-stone-700">
+        <a href="index.html" class="hover:text-zesty-green transition-colors flex items-center gap-1.5">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Trang Chủ
+        </a>
+        <a href="index.html#story" class="hover:text-zesty-green transition-colors">Sứ Mệnh</a>
+        <a href="index.html#products" class="text-amber-800 font-bold">Sản Phẩm</a>
+        <a href="index.html#b2b" class="hover:text-zesty-green transition-colors text-amber-900 flex items-center gap-1 font-bold">
+          <i data-lucide="handshake" class="w-4 h-4"></i> Đối Tác
+        </a>
+      </nav>
+
+      <div class="flex items-center space-x-2">
+        <a href="#order-form" class="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-zesty-orange to-amber-800 text-white font-bold text-xs sm:text-sm shadow-md shadow-amber-900/20 hover:from-zesty-orangeDark hover:to-amber-900 transition-all active:scale-95">
+          <i data-lucide="bell-ring" class="w-4 h-4"></i>
+          <span>Đăng Ký Đặt Trước</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
+    <nav class="flex text-xs text-stone-600 gap-1.5 sm:gap-2 items-center flex-wrap">
+      <a href="index.html" class="hover:text-zesty-green flex items-center gap-1"><i data-lucide="home" class="w-3.5 h-3.5"></i> Trang chủ</a>
+      <span>/</span>
+      <a href="index.html#products" class="hover:text-zesty-green">Sản phẩm</a>
+      <span>/</span>
+      <span class="text-stone-900 font-bold">ZEMMI THUẦN CHAY</span>
+    </nav>
+  </div>
+
+  <!-- Product Main Section -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      
+      <!-- Product Image Column with COMING SOON Ribbon -->
+      <div class="lg:col-span-6 lg:sticky lg:top-24">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-4 sm:p-6 border border-amber-900/10 shadow-xl overflow-hidden group relative">
+          
+          <!-- Coming soon Ribbon -->
+          <div class="ribbon-wrapper">
+            <div class="ribbon-tag">COMING SOON</div>
+          </div>
+
+          <div class="relative overflow-hidden rounded-2xl bg-gradient-to-b from-amber-50/70 to-orange-50/40">
+            <img src="zesty%20spice%20thuan%20chay%20anhsale.png" alt="ZEMMI THUẦN CHAY - Bột gia vị sinh thái từ vỏ quả" class="w-full h-auto object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-amber-800 text-white text-[10px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full shadow-md">
+              Thuần Chay 100%
+            </div>
+            <div class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-white/95 text-amber-950 text-[10px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full shadow-md border border-amber-100">
+              Khối lượng: 100g
+            </div>
+          </div>
+          
+          <!-- Key highlights below image -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-3 mt-4 sm:mt-6 text-center">
+            <div class="p-2 sm:p-3 rounded-2xl bg-amber-50/70 border border-amber-100/80">
+              <span class="text-lg sm:text-xl">🍄</span>
+              <p class="text-[11px] sm:text-xs font-bold text-stone-800 mt-1">Nấm Đông Cô</p>
+              <p class="text-[9px] sm:text-[10px] text-stone-500">Vị ngọt đượm vị</p>
+            </div>
+            <div class="p-2 sm:p-3 rounded-2xl bg-amber-50/70 border border-amber-100/80">
+              <span class="text-lg sm:text-xl">🟤</span>
+              <p class="text-[11px] sm:text-xs font-bold text-stone-800 mt-1">La Hán Quả</p>
+              <p class="text-[9px] sm:text-[10px] text-stone-500">Ngọt hậu thanh tịnh</p>
+            </div>
+            <div class="p-2 sm:p-3 rounded-2xl bg-amber-50/70 border border-amber-100/80">
+              <span class="text-lg sm:text-xl">🍊</span>
+              <p class="text-[11px] sm:text-xs font-bold text-stone-800 mt-1">Trần Bì Vỏ Quả</p>
+              <p class="text-[9px] sm:text-[10px] text-stone-500">Thơm thanh mát</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Info Column -->
+      <div class="lg:col-span-6 space-y-6 sm:space-y-8">
+        
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-950 text-xs font-extrabold uppercase tracking-wide mb-2.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            <span>Sắp Ra Mắt • Dòng Thuần Chay Thực Dưỡng</span>
+          </div>
+          <h1 class="text-2xl sm:text-4xl font-serif font-bold text-stone-900 leading-tight">
+            ZEMMI <span class="text-zesty-orange">THUẦN CHAY</span>
+          </h1>
+          <p class="text-base sm:text-lg text-amber-800 font-medium italic mt-1">
+            "Nêm chút tinh hoa, thổi hồn món Việt"
+          </p>
+          <p class="text-xs sm:text-sm text-stone-700 mt-3 leading-relaxed">
+            Dành riêng cho người ăn chay, người ăn thực dưỡng hoặc yêu thích ẩm thực thanh lành. Công thức kết hợp trần bì (vỏ quả), la hán quả, nấm đông cô và thảo mộc tự nhiên mang đến vị ngọt sâu lắng hoàn toàn không có bột ngọt hay phẩm màu nhân tạo.
+          </p>
+        </div>
+
+        <!-- 1. THÀNH PHẦN -->
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 sm:p-8 border border-amber-900/10 shadow-sm space-y-4">
+          <h2 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2 border-b border-stone-100 pb-3">
+            <i data-lucide="list-checks" class="w-5 h-5 text-zesty-orange"></i>
+            Thành Phần Nguyên Liệu
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 text-xs">
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Muối thường</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Vị mặn tinh khiết</span>
+            </div>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Nấm đông cô</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Umami thảo mộc</span>
+            </div>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">La hán quả</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Ngọt mát tự nhiên</span>
+            </div>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Bột tỏi</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Thơm dịu</span>
+            </div>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Trần bì</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Vỏ quả tinh túy</span>
+            </div>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Bột gừng</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Ấm vị kiện tỳ</span>
+            </div>
+            <div class="p-2.5 sm:p-3 bg-stone-50/80 rounded-xl border border-stone-100">
+              <span class="font-bold text-stone-800 block">Tiêu xay</span>
+              <span class="text-stone-500 text-[10px] sm:text-[11px]">Cay nhẹ kích vị</span>
+            </div>
+            <div class="p-2.5 sm:p-3 bg-amber-50 rounded-xl border border-amber-100">
+              <span class="font-bold text-amber-900 block">Thực vật 100%</span>
+              <span class="text-amber-700 text-[10px] sm:text-[11px]">Thuần chay sạch</span>
+            </div>
+          </div>
+
+          <!-- Cảnh báo dị ứng -->
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-amber-50/90 border border-amber-200 flex items-start gap-2.5 sm:gap-3 mt-4">
+            <i data-lucide="alert-triangle" class="w-4 h-4 sm:w-5 sm:h-5 text-amber-600 shrink-0 mt-0.5"></i>
+            <div class="text-xs text-amber-950">
+              <strong class="font-bold">Cảnh báo dị ứng:</strong> Thành phần có chứa <strong>nấm đông cô</strong>. Không sử dụng cho người dị ứng với thành phần trên.
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. THÔNG TIN DINH DƯỠNG -->
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 sm:p-8 border border-amber-900/10 shadow-sm space-y-4">
+          <h2 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2 border-b border-stone-100 pb-3">
+            <i data-lucide="activity" class="w-5 h-5 text-zesty-orange"></i>
+            Thông Tin Dinh Dưỡng (Nutrition Facts)
+          </h2>
+          <div class="rounded-2xl overflow-hidden border border-stone-200 text-xs sm:text-sm">
+            <table class="w-full">
+              <thead>
+                <tr class="bg-zesty-orangeDark text-white text-[11px] sm:text-xs">
+                  <th class="text-left px-3 sm:px-4 py-2 sm:py-2.5 font-bold">Chỉ tiêu dinh dưỡng</th>
+                  <th class="text-right px-3 sm:px-4 py-2 sm:py-2.5 font-bold">Giá trị / 100g</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-stone-100">
+                <tr class="nutrition-row">
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-stone-700">Energy (Năng lượng)</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-right font-bold text-stone-900">180 kcal</td>
+                </tr>
+                <tr class="nutrition-row">
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-stone-700">Protein (Chất đạm)</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-right font-bold text-stone-900">12g</td>
+                </tr>
+                <tr class="nutrition-row">
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-stone-700">Total Fat (Tổng chất béo)</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-right font-bold text-stone-900">3g</td>
+                </tr>
+                <tr class="nutrition-row">
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-stone-700">Total Carbohydrate (Tổng Carb)</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-right font-bold text-stone-900">44g</td>
+                </tr>
+                <tr class="nutrition-row">
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-stone-700">Sodium (Natri)</td>
+                  <td class="px-3 sm:px-4 py-2 sm:py-2.5 text-right font-bold text-stone-900">10g</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-amber-950 font-bold bg-amber-50 px-3 py-2 rounded-xl border border-amber-100">
+            <i data-lucide="shield-check" class="w-4 h-4 text-amber-600"></i>
+            <span>Cam kết: KHÔNG CHẤT BẢO QUẢN – 100% NGUYÊN LIỆU THỰC VẬT</span>
+          </div>
+        </div>
+
+        <!-- 3. CÁCH DÙNG & BẢO QUẢN -->
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 sm:p-8 border border-amber-900/10 shadow-sm space-y-5 sm:space-y-6">
+          <h2 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2 border-b border-stone-100 pb-3">
+            <i data-lucide="chef-hat" class="w-5 h-5 text-zesty-orange"></i>
+            Hướng Dẫn Sử Dụng & Bảo Quản
+          </h2>
+          
+          <div class="space-y-3 text-xs text-stone-700">
+            <div class="p-3 sm:p-3.5 rounded-2xl bg-amber-50/70 border border-amber-100 flex gap-2.5 sm:gap-3">
+              <span class="w-6 h-6 rounded-full bg-zesty-orange text-white flex items-center justify-center font-bold text-xs shrink-0">1</span>
+              <div>
+                <strong class="font-bold text-stone-900 text-xs sm:text-sm block mb-0.5">Dùng để ướp nguyên liệu chay:</strong>
+                Sử dụng <strong>1 - 2 thìa cà phê</strong> bột gia vị cho <strong>500g nguyên liệu</strong> (đậu hũ, mì căn, sườn chay, nấm tươi). Thoa đều và ướp khoảng 15-30 phút trước khi áp chảo, nướng hoặc kho để dậy mùi thơm và vị ngọt tự nhiên.
+              </div>
+            </div>
+
+            <div class="p-3 sm:p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-100 flex gap-2.5 sm:gap-3">
+              <span class="w-6 h-6 rounded-full bg-zesty-green text-white flex items-center justify-center font-bold text-xs shrink-0">2</span>
+              <div>
+                <strong class="font-bold text-stone-900 text-xs sm:text-sm block mb-0.5">Dùng để xào:</strong>
+                Rắc <strong>1 thìa cà phê</strong> vào các món rau xào, cơm chiên hoặc mì xào ở phút cuối cùng trên chảo để dậy mùi thơm tự nhiên.
+              </div>
+            </div>
+
+            <div class="p-3 sm:p-3.5 rounded-2xl bg-stone-100/90 border border-stone-200 flex gap-2.5 sm:gap-3">
+              <span class="w-6 h-6 rounded-full bg-stone-700 text-white flex items-center justify-center font-bold text-xs shrink-0">3</span>
+              <div>
+                <strong class="font-bold text-stone-900 text-xs sm:text-sm block mb-0.5">Dùng để nấu nước dùng / canh chay:</strong>
+                Cho vào nước dùng để lấy hương thơm và vị ngọt hậu tự nhiên của nấm hương (nấm đông cô) và la hán quả. Nên kết hợp thêm nước dùng rau củ để món canh đạt hương vị trọn vẹn.
+              </div>
+            </div>
+          </div>
+
+          <!-- Bảo quản & Lưu ý -->
+          <div class="pt-2 space-y-3 border-t border-stone-100 text-xs">
+            <div class="bg-stone-50 p-3.5 sm:p-4 rounded-2xl space-y-1.5 text-stone-700">
+              <p class="font-bold text-stone-900 text-xs flex items-center gap-1.5">
+                <i data-lucide="archive" class="w-4 h-4 text-zesty-orange"></i> Hướng dẫn bảo quản:
+              </p>
+              <p>• Sau khi sử dụng, cần đóng chặt cả hai nắp để ngăn không khí lọt vào.</p>
+              <p>• Luôn để gói hút ẩm thực phẩm bên trong hũ.</p>
+              <p>• Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp và hơi ẩm nhiều.</p>
+              <p>• <strong>HSD:</strong> 3-4 tháng kể từ ngày sản xuất khi bảo quản đúng cách ở nhiệt độ phòng.</p>
+            </div>
+
+            <div class="bg-red-50 p-3 sm:p-3.5 rounded-2xl border border-red-100 flex items-start gap-2.5 text-red-900">
+              <i data-lucide="info" class="w-4 h-4 text-red-600 shrink-0 mt-0.5"></i>
+              <span><strong>*Lưu ý:</strong> Không rắc trực tiếp sản phẩm phía trên thức ăn đang sôi hoặc bốc hơi nhanh. Hơi nước nhiều sẽ làm gia vị kẹt lại và gây ẩm mốc.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. FORM ĐẶT TRƯỚC / MUA HÀNG -->
+        <div id="order-form" class="bg-gradient-to-br from-[#1C140E] via-[#2A1E14] to-[#142816] text-white rounded-3xl p-4 sm:p-8 shadow-2xl space-y-4 sm:space-y-5">
+          <div class="text-center space-y-2">
+            <span class="inline-block px-3 py-1 bg-amber-400 text-stone-950 text-[10px] sm:text-xs font-black rounded-full uppercase">Đăng Ký Đặt Trước</span>
+            <h3 class="text-xl sm:text-2xl font-serif font-bold text-white">Đặt Trước ZEMMI THUẦN CHAY</h3>
+            <p class="text-xs text-amber-100 max-w-md mx-auto">
+              Sản phẩm sắp ra mắt! Đăng ký ngay để nhận ưu đãi dùng thử đặc biệt và là người đầu tiên trải nghiệm hương vị thuần chay độc đáo.
+            </p>
+          </div>
+
+          <!-- Embed Google Form -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-inner p-1">
+            <iframe 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSekX3g9NfUqxKpfp70flB49F20yHbxoy_L_nklwIfCZSHnMNg/viewform?embedded=true" 
+              width="100%" 
+              height="750" 
+              frameborder="0" 
+              marginheight="0" 
+              marginwidth="0" 
+              class="w-full min-h-[600px] sm:min-h-[750px] rounded-xl">
+              Đang tải biểu mẫu...
+            </iframe>
+          </div>
+
+          <div class="text-center pt-2">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSekX3g9NfUqxKpfp70flB49F20yHbxoy_L_nklwIfCZSHnMNg/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-amber-300 hover:text-amber-200 underline font-semibold">
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Mở biểu mẫu đặt hàng trong tab mới nếu không tải được
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-amber-900/10 pt-12 sm:pt-14 pb-10 mt-14 sm:mt-20 bg-white/40 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pb-10 border-b border-amber-900/10">
+        
+        <div class="lg:col-span-2 space-y-3 sm:space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="logo.jpg" alt="ZEMMI Logo" class="w-10 h-10 object-contain rounded-lg shadow-sm border border-emerald-200">
+            <div>
+              <span class="text-lg sm:text-xl font-black text-zesty-greenDark block leading-none">ZEMMI</span>
+              <span class="text-[10px] text-amber-900 font-bold tracking-wide">Bột Gia Vị Sinh Thái Từ Vỏ Quả</span>
+            </div>
+          </div>
+          <p class="text-xs text-stone-600 leading-relaxed max-w-sm italic">
+            "Nêm chút tinh hoa, thổi hồn món Việt"
+          </p>
+          <p class="text-xs text-stone-500 leading-relaxed max-w-sm">
+            Gia vị sinh thái từ vỏ quả tự nhiên, mang đến giải pháp nêm nếm lành mạnh cho mọi bữa cơm gia đình Việt — không chất bảo quản, không phẩm màu.
+          </p>
+        </div>
+
+        <div class="space-y-2.5 sm:space-y-3">
+          <h5 class="text-xs font-extrabold uppercase tracking-wider text-stone-900">Sản Phẩm</h5>
+          <ul class="space-y-2 text-xs text-stone-600">
+            <li><a href="zemmi.html" class="hover:text-zesty-green">ZEMMI (Bản gốc)</a></li>
+            <li><a href="zemmi-thuan-chay.html" class="text-amber-800 font-bold">ZEMMI Thuần Chay (Coming Soon)</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2.5 sm:space-y-3">
+          <h5 class="text-xs font-extrabold uppercase tracking-wider text-stone-900">Điều Hướng</h5>
+          <ul class="space-y-2 text-xs text-stone-600">
+            <li><a href="index.html" class="hover:text-zesty-green">Trang chủ</a></li>
+            <li><a href="index.html#story" class="hover:text-zesty-green">Sứ mệnh</a></li>
+            <li><a href="index.html#b2b" class="hover:text-zesty-green">Dành cho đối tác</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 text-center text-xs text-stone-500 space-y-1.5">
+        <p class="font-semibold text-stone-700">© 2026 ZEMMI. All rights reserved.</p>
+        <p class="text-stone-600">Product by HUIT students - Vietnam</p>
+        <p class="text-stone-500">Web by Truong Minh Tien - Eastern International University</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
